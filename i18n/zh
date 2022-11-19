@@ -1,168 +1,50 @@
 ---
-title: Activity
-slug: /metrics-models/robustness/activity
+title: Robustness
+slug: /dimensions-define/robustness
 tags:
   - Metrics Models
   - Robustness
-  - Activity
-description: Describe how active an open source community is.
+description: The capability of an ecosystem or project to face and survive disruptions.Determine
 ---
 
-# Activity
+# Robustness
+Definition: The capability of an ecosystem or project to face and survive disruptions.Determine
 
-Community Activity is used to describe how active an open source community is.
+# Metrics Models
 
-In order for an open source project to be sustainable, it must continue to be maintained and improved following its initial release. Activity describes how much work is being done on a project over time. High levels of community activity may indicate that a project is sustainable and low levels of community activity may indicate that a project is at risk.
+## [Activity](./activity.md#activity)
 
-# Metrics in the Metrics Model
+| Metrics Name                                                   | Definition                                                                                                                                                   | Threshold | Weight  |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ------- |
+| [Contributor Count](./activity.md#contributor-count)           | Determine how many active code commit authors, pr authors, review participants, issue authors, and issue comments participants there are in the past 90 days | 2000      | 18.009% |
+| [Commit frequency](./activity.md#commit-frequency)             | Determine the average number of commits per week in the past 90 days.                                                                                        | 1000      | 18.009% |
+| [Updated Since](./activity.md#updated-since)                   | Determine the average time per repository since the repository was last updated (in months).                                                                 | 0.25      | 12.742% |
+| [Org Count](./activity.md#organization-count)                  | Number of organizations to which active code contributors belong in the past 90 days.                                                                        | 10        | 11.501% |
+| [Created Since](./activity.md#created-since)                   | Determine how long a repository has existed since it was created (in months).                                                                                | 120       | 7.768%  |
+| [Comment Frequency](./activity.md#comment-frequency)           | Determine the average number of comments per issue created in the last 90 days.                                                                              | 5         | 7.768%  |
+| [Code Review Count](./activity.md#code-review-count)           | Determine the average number of review comments per pull request created in the last 90 days                                                                 | 8         | 4.919%  |
+| [Updated Issues Count](./activity.md#updated-issues-count)     | Determine the number of issues updated in the last 90 days.                                                                                                  | 2500      | 4.919%  |
+| [Recent Releases Count](./activity.md#recent-releases-count)   | Determine the number of releases in the last year.                                                                                                           | 12        | 3.177%  |
+| [Maintainer Count](./activity.md#maintainer-count)             | Determine the average number of maintainers per repository.                                                                                                  | 100       | 2.090%  |
+| [Meeting Count](./activity.md#meeting-count)                   | Determine the number of meetings held in the last 90 days.                                                                                                   | 100       | 2.090%  |
+| [Meeting Attendee Count](./activity.md#meeting-attendee-count) | Determine the average number of attendees per meeting in the last 90 days.                                                                                   | 10        | 2.090%  |
 
-## Contributor Count
+## [Developer Convertion](./developer/developer-convertion.md#developer-convertion)
 
-* Definition: Determine how many active code commit authors, pr authors, review participants, issue authors, and issue comments participants there are in the past 90 days
-* Weight: 18.01%
-* Threshold: 2000
-* Note: when a person has more than one contributions with different roles in multiple repositories, like code commit author and issue author, we only count once.
+Coming soon!
 
-## Commit Frequency
-* Definition: Determine the average number of commits per week in the past 90 days.
-* Weight: 18.01%
-* Threshold: 1000
+## [Developer Retention](./developer/developer-retention.md#developer-retention)
 
-## Updated Since
-* Definition: Determine the average time per repository since the repository was last updated (in months).
-* Weight: 12.74%
-* Threshold: 0.25 months
+Coming soon!
 
-## Organization Count
-* Definition: Number of organizations to which active code contributors belong in the past 90 days
-* Weight: 11.50%
-* Threshold: 10
+## [Inner Connectedness](./organization/innner-connectedness.md#inner-connectedness)
 
-## Created Since
-* Definition: Determine how long a repository has existed since it was created (in months).
-* Weight: 7.77%
-* Threshold: 120 months
-* Note: The existence time will be superimposed in the multi-repositories scenario.
+Coming soon!
 
-## Comment Frequency
-* Definition: Determine the average number of comments per issue created in the last 90 days.
-* Weight: 7.77%
-* Threshold: 5
+## [Organization Collaboration Relationships](./organization/organization-collaboration-relationships.md#organization-collaboration-relationships)
 
-## Code Review Count
-* Definition: Determine the average number of review comments per pull request created in the last 90 days
-* Weight: 4.92%
-* Threshold: 8
+Coming soon!
 
-## Updated Issues Count
-* Definition: Determine the number of issues updated in the last 90 days.
-* Weight: 4.92%
-* Threshold: 2500
+## [Outbound Connectedness](./organization/outbound-connectedness.md)
 
-## Recent Releases Count
-* Definition: Determine the number of releases in the last year.
-* Weight: 3.18%
-* Threshold: 12
-
-## Maintainer Count
-* Definition: Determine the average number of maintainers per repository.
-* Weight: 2.090%
-* Threshold: 100
-* Note: not ready yet.
-
-## Meeting Count
-* Definition: Determine the number of meetings held in the last 90 days.
-* Weight: 2.090%
-* Threshold: 100
-* Note: not ready yet.
-
-## Meeting Attendee Count
-* Definition: Determine the average number of attendees per meeting in the last 90 days.
-* Weight: 2.090%
-* Threshold: 10
-* Note: not ready yet.
-
-## Closed Issues Count
-* Definition: Determine the number of issues closed in the last 90 days.
-* Weight: 4.92%
-* Threshold: 2500
-* Note: it is duplicated with "Updated Issues Count", considerring removing from this model.
-
-
-# Metric Model Algorithm
-
-## Weight
-
-We use [AHP](https://en.wikipedia.org/wiki/Analytic_hierarchy_process) to calculate weight of each metric.
-
-### AHP Input Data
-| Metric Name             | Contributor Count | Commit frequency | Updated Since | Org Count | Created Since | Comment Frequency | Code Review Count | Closed Issues Count | Updated Issues Count | Recent Releases Count | Maintainer Count | Meeting Count | Meeting Attendee Count |
-| ----------------------- | ----------------- | ---------------- | ------------- | --------- | ------------- | ----------------- | ----------------- | ------------------- | -------------------- | --------------------- | ---------------- | ------------- | ---------------------- |
-| Contributor Count       | 1                 | 1                | 2             | 2         | 3             | 3                 | 4                 | 4                   | 4                    | 5                     | 6                | 6             | 6                      |
-| Commit frequency        | 1                 | 1                | 2             | 2         | 3             | 3                 | 4                 | 4                   | 4                    | 5                     | 6                | 6             | 6                      |
-| Updated Since           | 0.5               | 0.5              | 1             | 2         | 2             | 2                 | 3                 | 3                   | 3                    | 4                     | 5                | 5             | 5                      |
-| Org Count               | 0.5               | 0.5              | 0.5           | 1         | 2             | 2                 | 3                 | 3                   | 3                    | 4                     | 5                | 5             | 5                      |
-| Created Since           | 0.333             | 0.333            | 0.5           | 0.5       | 1             | 1                 | 2                 | 2                   | 2                    | 3                     | 4                | 4             | 4                      |
-| Comment Frequency       | 0.333             | 0.333            | 0.5           | 0.5       | 1             | 1                 | 2                 | 2                   | 2                    | 3                     | 4                | 4             | 4                      |
-| Code Review Count       | 0.25              | 0.25             | 0.333         | 0.333     | 0.5           | 0.5               | 1                 | 1                   | 1                    | 2                     | 3                | 3             | 3                      |
-| ~~Closed Issues Count~~ | 0.25              | 0.25             | 0.333         | 0.333     | 0.5           | 0.5               | 1                 | 1                   | 1                    | 2                     | 3                | 3             | 3                      |
-| Updated Issues Count    | 0.25              | 0.25             | 0.333         | 0.333     | 0.5           | 0.5               | 1                 | 1                   | 1                    | 2                     | 3                | 3             | 3                      |
-| Recent Releases Count   | 0.2               | 0.2              | 0.25          | 0.25      | 0.333         | 0.333             | 0.5               | 0.5                 | 0.5                  | 1                     | 2                | 2             | 2                      |
-| Maintainer Count        | 0.167             | 0.167            | 0.2           | 0.2       | 0.25          | 0.25              | 0.333             | 0.333               | 0.333                | 0.5                   | 1                | 1             | 1                      |
-| Meeting Count           | 0.167             | 0.167            | 0.2           | 0.2       | 0.25          | 0.25              | 0.333             | 0.333               | 0.333                | 0.5                   | 1                | 1             | 1                      |
-| Meeting Attendee Count  | 0.167             | 0.167            | 0.2           | 0.2       | 0.25          | 0.25              | 0.333             | 0.333               | 0.333                | 0.5                   | 1                | 1             | 1                      |
-
-### AHP Analysis Result
-
-| Metrics Name            | Eigenvector | Weight  |
-| ----------------------- | ----------- | ------- |
-| Contributor Count       | 2.341       | 18.009% |
-| Commit frequency        | 2.341       | 18.009% |
-| Updated Since           | 1.657       | 12.742% |
-| Org Count               | 1.495       | 11.501% |
-| Created Since           | 1.010       | 7.768%  |
-| Comment Frequency       | 1.010       | 7.768%  |
-| Code Review Count       | 0.639       | 4.919%  |
-| ~~Closed Issues Count~~ | 0.639       | 4.919%  |
-| Updated Issues Count    | 0.639       | 4.919%  |
-| Recent Releases Count   | 0.413       | 3.177%  |
-| Maintainer Count        | 0.272       | 2.090%  |
-| Meeting Count           | 0.272       | 2.090%  |
-| Meeting Attendee Count  | 0.272       | 2.090%  |
-
-### Consistency Test Results
-
-| Largest Eigenvalue | CI Value | RI Value | CR Value | Consistency Test |
-| ------------------ | -------- | -------- | -------- | ---------------- |
-| 13.303             | 0.025    | 1.560    | 0.016    | PASS             |
-
-## Threshold
-
-The threshold we chose is based on the big-data observations from different types of open source projects.
-
-# References
-
-* [CHAOSS Metric Model: Community Activity](https://github.com/chaoss/wg-metrics-models/tree/main/metrics-model-libs/community-activity)
-
-# Contributors
-## Frontend
-* Shengxiang Zhang
-* Feng Zhong
-* Chaoqun Huang
-* Huatian Qin
-* Xingyou Lai
-
-## Backend
-* Yehui Wang
-* Chenqi Shan
-* Shengbao Li
-* Huatian Qin
-
-## Metric Model
-* Yehui Wang
-* Jun Zhong
-* Chenqi Shan
-* Matt Germonprez
-* Kevin Lumbard
-* Vinod Ahuja
-
+Coming soon!
