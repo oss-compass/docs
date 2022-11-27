@@ -1,6 +1,6 @@
 ---
 title: Developer Attraction
-slug: /metrics-models/niche-creation//developer-attraction
+slug: /metrics-models/niche-creation/developer-attraction
 tags:
   - Metrics Models
   - Niche Creation
