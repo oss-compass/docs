@@ -1,6 +1,6 @@
 ---
 title: Community Service and Support
-slug: /metrics-models/productivity/niche-creation
+slug: /metrics-models/productivity/community-service-and-support
 tags:
   - Metrics Models
   - Productivity
