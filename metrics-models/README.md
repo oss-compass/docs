@@ -9,7 +9,7 @@ Definition: The efficiency with which an ecosystem or project converts inputs in
 
 Metrics Model Names | Descriptions 
 --- | --- 
-[Code Quality Guarantee ](./productivity/code/code-quality-guarantee.md#code-quality-guarantee) | Code, as the final output of a project, is the essence of the entire community's contribution. Code quality guarantee is the measurement of how to guarantee software quality using multiple proxies.
+[Collaboration Development Index](./productivity/collaboration-development-index.md#collaboration-development-index) | Use proxy metrics to evaluate how well the development process is managed and how well the community is doing with collaborative development.
 [Code Security Guarantee](./productivity/code/code-security-guarantee.md#code-security-guarantee) | Coming soon!
 [Code Compliance Guarantee](./productivity/code/code-compliance-guarantee.md#code-compliance-guarantee) | Coming soon!
 [Content](./productivity/content.md#content) | Coming soon!

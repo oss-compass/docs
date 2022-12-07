@@ -1,20 +1,20 @@
 ---
-title: Code Quality Guarantee
-slug: /metrics-models/productivity/code-quality-guarantee
+title: Collaboration Development Index
+slug: /metrics-models/productivity/collaboration-development-index
 tags:
   - Metrics Models
   - Productivity
-  - Code Quality Guarantee
-description: The measurement of how to guarantee software quality using multiple proxies
+  - Collaboration Development Index
+description: Use proxy metrics to evaluate how well the development process is managed and how well the community is doing with collaborative development
 ---
 
-# Code Quality Guarantee 
+# Collaboration Development Index
 
-Code, as the final output of a project, is the essence of the entire community's contribution. Code quality guarantee is the measurement of how to guarantee software quality using multiple proxies.
+Open source projects, as a typical manifestation of human group intelligence, the ability to establish collaborative development management is a key element contributing to the success of the project. And code, as the final output of a project, is the essence of the entire community's contribution. So we evaluate how well the development process is managed and how well the community does collaborative development around a series of indirect metrics related to code contribution.
 
 # Metrics in the Metrics Model
 
-## Contributor Count
+## Code Contributor Count
 
 * Definition: Determine how many active pr creators, code reviewers, commit authors there are in the past 90 days.
 * Weight: 19.987%
@@ -71,9 +71,9 @@ We use [AHP](https://en.wikipedia.org/wiki/Analytic_hierarchy_process) to calcul
 
 ### AHP Input Data
 
-Metric Name | Contributor Count | Commit Frequency | Is Maintained | Commit PR Linked Ratio | PR Issue Linked Ratio | Code Review Ratio | Code Merge Ratio | Lines of Code Frequency
+Metric Name | Code Contributor Count | Commit Frequency | Is Maintained | Commit PR Linked Ratio | PR Issue Linked Ratio | Code Review Ratio | Code Merge Ratio | Lines of Code Frequency
 --- | --- | --- | --- | --- | --- | --- | --- | --- 
-Contributor Count |  1.000 | 1.111	| 1.250	| 1.429	| 1.667	| 2.000	| 2.000	| 5.000
+Code Contributor Count |  1.000 | 1.111	| 1.250	| 1.429	| 1.667	| 2.000	| 2.000	| 5.000
 Commit Frequency |  0.900 | 1.000	| 1.250	| 1.250	| 1.429	| 1.667	| 1.667	| 2.500
 Is Maintained |  0.800 | 0.800	| 1.000	| 1.111	| 1.250	| 1.429	| 1.429	| 2.000
 Commit PR Linked Ratio |  0.700 | 0.800	| 0.900	| 1.000	| 1.111	| 1.250	| 1.250	| 2.000
@@ -107,7 +107,7 @@ The threshold we chose is based on the big-data observations from different type
 
 # References
 
-* [CHAOSS Metric Model: Community Service and Support](https://github.com/chaoss/wg-metrics-models/tree/main/metrics-model-libs/community-service-and-support)
+* [CHAOSS Metric Model: Community Service and Support](https://github.com/chaoss/wg-metrics-models/tree/main/metrics-model-libs/code-quality-guarantee)
 
 # Contributors
 ## Frontend

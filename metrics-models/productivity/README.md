@@ -12,18 +12,18 @@ Definition: The efficiency with which an ecosystem or project converts inputs in
 
 # Metrics Models
 
-## [Code Quality Guarantee ](./code/code-quality-guarantee.md#code-quality-guarantee)
+## [Collaboration Development Index](./collaboration-development-index.md#collaboration-development-index)
 
 Metrics Name | Definition | Threshold | Weight
 --- | --- | --- | ---
-[Contributor Count](./code/code-quality-guarantee.md#contributor-count) | Determine how many active pr creators, code reviewers, commit authors there are in the past 90 days. | 1000 | 19.987%
-[Commit Frequency](./code/code-quality-guarantee.md#commit-frequency) |Determine the average number of commits per week in the past 90 days.| 1000 | 16.363%
-[Is Maintained](./code/code-quality-guarantee.md#is-maintained) |Percentage of weeks with at least one code commit in the past 90 days(single repository). Percentage of code repositories with at least one code commit in the last 30 days(multiple repositories).| 100% | 13.853%
-[Commit PR Linked Ratio](./code/code-quality-guarantee.md#commit-pr-linked-ratio)  | Determine the percentage of new code commit link pull request in the last 90 days. | 100% |12.612%
-[PR Issue Linked Ratio](./code/code-quality-guarantee.md#pr-issue-linked-ratio) |Determine the percentage of new pull request link issues in the last 90 days. |100%|11.319%
-[Code Review Ratio](./code/code-quality-guarantee.md#code-review-ratio) |Determine the percentage of code commits with at least one reviewer (not PR creator) in the last 90 days.|100%|10.113%
-[Code Merge Ratio](./code/code-quality-guarantee.md#code-merge-ratio) |Determine the percentage of PR Mergers and PR authors who are not the same person in the last 90 days of commits.|100%| 10.113%
-[Lines of Code Frequency](./code/code-quality-guarantee.md#lines-of-code-frequency) |Determine the average number of lines touched (lines added plus lines removed) per week in the past 90 days. |300000| 5.640%
+[Code Contributor Count](./collaboration-development-index.md#code-contributor-count) | Determine how many active pr creators, code reviewers, commit authors there are in the past 90 days. | 1000 | 19.987%
+[Commit Frequency](./collaboration-development-index.md#commit-frequency) |Determine the average number of commits per week in the past 90 days.| 1000 | 16.363%
+[Is Maintained](./collaboration-development-index.md#is-maintained) |Percentage of weeks with at least one code commit in the past 90 days(single repository). Percentage of code repositories with at least one code commit in the last 30 days(multiple repositories).| 100% | 13.853%
+[Commit PR Linked Ratio](./collaboration-development-index.md#commit-pr-linked-ratio)  | Determine the percentage of new code commit link pull request in the last 90 days. | 100% |12.612%
+[PR Issue Linked Ratio](./collaboration-development-index.md#pr-issue-linked-ratio) |Determine the percentage of new pull request link issues in the last 90 days. |100%|11.319%
+[Code Review Ratio](./collaboration-development-index.md#code-review-ratio) |Determine the percentage of code commits with at least one reviewer (not PR creator) in the last 90 days.|100%|10.113%
+[Code Merge Ratio](./collaboration-development-index.md#code-merge-ratio) |Determine the percentage of PR Mergers and PR authors who are not the same person in the last 90 days of commits.|100%| 10.113%
+[Lines of Code Frequency](./collaboration-development-index.md#lines-of-code-frequency) |Determine the average number of lines touched (lines added plus lines removed) per week in the past 90 days. |300000| 5.640%
 
 ## [Code Security Guarantee](./code/code-security-guarantee.md#code-security-guarantee)
 
