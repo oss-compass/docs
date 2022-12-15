@@ -20,11 +20,15 @@ Open source projects, as a typical manifestation of human group intelligence, th
 * Weight: 19.987%
 * Threshold: 1000
 
+Here we focus on the number of contributors directly related to the code contribution. As a result of this model, it identifies a well-managed community of development collaborations that are gathering more and more active code contributors. We believe that some types of the Issue are also related to code contributions, such as Bug , new requirements, and so on, and will eventually introduce code contributions. But as a general indicator, it is difficult to identify issues in a uniform way (such as a Bug type) within the specific type of each project, because each project has a different definition and understanding of the Bug type. So we made a trade-off, choosing only PR-related and Code Commit-related contributors as insight objects.
+
 ## Commit Frequency
 
 * Definition: Determine the average number of commits per week in the past 90 days.
 * Weight: 16.363%
 * Threshold: 1000
+
+As an outcome indicator of this model, it identifies the sustainability and quantity of project contributions. Refers to the overall workload of the project.
 
 ## Is Maintained
 
@@ -33,11 +37,15 @@ Open source projects, as a typical manifestation of human group intelligence, th
 * Threshold: 100%
 * Note: definitions of single repository and multiple repositories are differerent. 
 
+This metric is used to determine whether the repository is being maintained on an ongoing basis. An actively maintained projects may be more resistant to risks such as vulnerabilities. It is related to the [Commit Frequency](#commit-frequency), but the focus is different. The former focuses on the number of code contributions during the cycle, while the latter focuses on the continuity of the code contributions. But we should not draw any direct conclusions about projects that are low on this indicator, and further insights are needed.
+
 ## Commit PR Linked Ratio
 
 * Definition: Determine the percentage of new code commit link pull request in the last 90 days. 
 * Weight: 12.612%
 * Threshold: 100%
+
+This indicator is used to determine whether the code submission has gone through the PR process. To determine whether a project is open source, perhaps we can verify the License it declares. But whether open source projects use open community collaboration model to develop, and whether the community is willing to build community with open source contributors and organizational partners, it is not enough to rely on License alone. Here we examine the project's willingness to collaborate by informing contributors in an open and transparent manner about the purpose of the code submission, whether it is a PR or not, and by being reviewed.
 
 ## PR Issue Linked Ratio
 
@@ -45,11 +53,15 @@ Open source projects, as a typical manifestation of human group intelligence, th
 * Weight: 11.319%
 * Threshold: 100%
 
+This metric is used to see if the code contributions are based upon open discussion, for example using the Issue. Note that not all issues result in code contributions, such as an Issue for the advisory type, there would be no code modifications generally . At the same time, we should also note that if PR goes through public discussion, Issue is not the only way, it may come from discussion in the forum. Therefore, we can not blindly pursue the high proportion of this indicator.
+
 ## Code Review Ratio
 
 * Definition: Determine the percentage of code commits with at least one reviewer (not PR creator) in the last 90 days. 
 * Weight: 10.113%
 * Threshold: 100%
+
+If a PR is merged without being reviewed by others, the probability of a code defect or vulnerability being introduced, intentionally or unintentionally, is greatly increased. Code reviews do not fully protect against this risk, but they greatly improve the introduction of risk.
 
 ## Code Merge Ratio
 
@@ -57,11 +69,15 @@ Open source projects, as a typical manifestation of human group intelligence, th
 * Weight: 10.113%
 * Threshold: 100%
 
+This metric was observed in conjunction with the [Code Review Ratio](code-review-ratio). When we introduced a third-party review, but if the PR creator intentionally or unintentionally ignored the third-party review and merged the code directly, there are also risks. It's important to note that the [Code Review Ratio](code-review-ratio) and [Code Merge Ratio](code-merge-ratio) are one best practices we observe in opensource communities, but rather the only standards. We also see in some communities based on trust in some good, long-term contributors, these people are granted the right to merge their own code direclty.
+
 ## Lines of Code Frequency
 
 * Definition: Determine the average number of lines touched (lines added plus lines removed) per week in the past 90 days. 
 * Weight: 5.640%
 * Threshold: 300000
+
+The number of lines of source code is indeed strongly correlated with the amount of work, but it is less correlated with the value created. What forms of code can be counted in the LOC, are uncertain factors. We do not care so much about the code form(program language, configuration files etc), only use it as the description of the workload, so its weight in the overall metrics model is low.
 
 # Metric Model Algorithm
 
