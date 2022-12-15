@@ -55,7 +55,7 @@ The Bug type Issue represents how efficiently the community handles issues that 
 
 We are seeking for the change request fast close, including code merged or rejected. Otherwise the longer it takes for a change request to be resolved, the greater the risk that merge-conflict will occur, while other change requests that depend on it will also be stalled. 
 
-### Comment Frequency
+### Issue Comment Frequency
 
 * Definition: Determine the average number of comments per issue created in the last 90 days.
 * Weight: 10.217%

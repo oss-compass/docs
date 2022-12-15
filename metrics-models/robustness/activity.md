@@ -23,20 +23,28 @@ In order for an open source project to be sustainable, it must continue to be ma
 * Threshold: 2000
 * Note: when a person has more than one contributions with different roles in multiple repositories, like code commit author and issue author, we only count once.
 
+In this model, we include all types of contributors to the project hosted by code host platform(Github, Gitee etc). Because we think that project activity is made up of all types of contributing behavior, and the more active contributors there are, the more important the project is.
+
 ## Commit Frequency
 * Definition: Determine the average number of commits per week in the past 90 days.
 * Weight: 18.01%
 * Threshold: 1000
+
+As an outcome indicator of this model, it identifies the sustainability and quantity of project contributions. Refers to the overall workload of the project.
 
 ## Updated Since
 * Definition: Determine the average time per repository since the repository was last updated (in months).
 * Weight: 12.74%
 * Threshold: 0.25 months
 
+This metric is used to indicate how often the project is updated. It identifies good communities for development collaboration and management, and makes frequent iterative and incremental development to promote continuous improvement in software quality. But the industr domains of a software project also determines that the frequency of its iterations is not always as high as possible, some Linux distribution projects, for example, exhibit a very typical pattern of code iterations with periodic release planning. Here we focus on the trend of the project during each cycle, and the relative results compared with the projects belong to the similar domains.
+
 ## Organization Count
 * Definition: Number of organizations to which active code contributors belong in the past 90 days
 * Weight: 11.50%
 * Threshold: 10
+
+The more organizations that participate in the project's ongoing contribution, the more organizations that rely heavily on the project. This will greatly promote the establishment and prosperity of ecology.
 
 ## Created Since
 * Definition: Determine how long a repository has existed since it was created (in months).
@@ -44,31 +52,43 @@ In order for an open source project to be sustainable, it must continue to be ma
 * Threshold: 120 months
 * Note: The existence time will be superimposed in the multi-repositories scenario.
 
-## Comment Frequency
+We used this metric to see the survival of the project, and the longer it lasted, the more resilient the project was to internal or external disturbances.
+
+## Issue Comment Frequency
 * Definition: Determine the average number of comments per issue created in the last 90 days.
 * Weight: 7.77%
 * Threshold: 5
+
+We would like to see the community encourage open and transparent discussion around specific bugs or requirements through Issue. The corresponding conclusions of the Issue can also be accumulated as a knowledge base and made available to more people.
 
 ## Code Review Count
 * Definition: Determine the average number of review comments per pull request created in the last 90 days
 * Weight: 4.92%
 * Threshold: 8
 
+We hope that code could be reviewed publicly by PR that shows how much the community values code quality and security management, and helps new people grow quickly.
+
 ## Updated Issues Count
 * Definition: Determine the number of issues updated in the last 90 days.
 * Weight: 4.92%
 * Threshold: 2500
+
+There are two reasons why we chose to use the number of Issue updates instead of counting the number of issues that were closed or resolved. First, there are many different types of issues, such as bugs, new function requirements, user inquiries, and CVEs. Only certain types of problems, such as CVES, must be resolved quickly. For other types of issues, quick Issue resolution is not pursued usually, and we need to communicate with the issue creator multiple times to better understand the details that takes time. If the functional requirements, from acceptance to resolution, are in accordance with the release plan, such scenarios may also take several months. Second, from the number of Issue updates, we can monitor the activity of the Issue processing. The issue update can also include reopening the issue, indicating concern about changes in the understanding of the issue.
 
 ## Recent Releases Count
 * Definition: Determine the number of releases in the last year.
 * Weight: 3.18%
 * Threshold: 12
 
+The high frequency of releases indicates that software artifacts are iterating rapidly to respond to user needs. Of course, software projects belong to different industries and fields, also decided that the frequency of its iterations is not always as high as possible, for example, large platform software project release cycle is six months to a year.
+
 ## Maintainer Count
 * Definition: Determine the average number of maintainers per repository.
 * Weight: 2.090%
 * Threshold: 100
 * Note: not ready yet. 
+
+The maintainer of a project is the person directly responsible for the project's code quality and technical iterations, and an active maintainer indicates a higher likelihood of high-quality maintenance on the project.
 
 ## Meeting Count
 * Definition: Determine the number of meetings held in the last 90 days.
