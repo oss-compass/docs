@@ -10,7 +10,7 @@ description: Describe how active organizations are in a community.
 
 # Organizations Activity
 
-Organizational activity is used to describe how active organizations are in a community.
+ Organizational activity is used to assess the activity of organizations in the community (Business Companies, colleges, etc.) . For an open source project, especially for a platform-based software project, the more organizations participate in community contributions, indicating that the ecological construction of the community is towards prosperity. Because software projects provide the business value or academic value-binding that organizations need, organizations are willing to participate in community contributions using organizations identities.
 
 ## Metrics in the Metrics Model
 
@@ -20,23 +20,31 @@ Organizational activity is used to describe how active organizations are in a co
 * Weight: 32.258%
 * Threshold: 30
 
-### Contributor Count
+What we count here are the organizations that contribute code. The reason for only counting code contributions is that code contributions have the highest technical threshold compared to other types of community contributions, and are the most direct manifestation of an organization's participation in community contributions. At the same time through the analysis of the organization's categories, we can also be more in-depth insight, such as understanding of the project's north-south ecological construction, etc.
+
+### Org Contributor Count
 
 * Definition: Number of active code contributors with organization affiliation in the past 90 days
 * Weight: 25.806%
 * Threshold: 300
 
-### Commit Frequency
+Here we count the number of code contributors with organized attributes. We are here to examine the organization's continued investment in community human resources.
+
+### Org Commit Frequency
 
 * Definition: Determine the average number of commits with organization affiliation per week in the past 90 days.
 * Weight: 25.81%
 * Threshold: 800
 
-### Contribution Last
+This indicator is similar to the number of contributors and measures the organization's input to the community in terms of the number of code contributions.
+
+### Org Contribution Last
 
 * Definition: Total contribution time of all organizations to the community in the past 90 days (weeks).
 * Weight: 16.13%
 * Threshold: 200
+
+We look at the development of ecology in terms of the time dimension, through how the organization participates and invests as time goes by.
 
 ## Metric Model Algorithm
 
