@@ -1,6 +1,6 @@
 ---
 title: Organizations Activity
-slug: /metrics-models/niche-creation/developer-retention
+slug: /metrics-models/niche-creation/organization-activity
 tags:
   - Metrics Models
   - Niche Creation

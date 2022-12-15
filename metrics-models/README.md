@@ -10,10 +10,10 @@ Definition: The efficiency with which an ecosystem or project converts inputs in
 Metrics Model Names | Descriptions 
 --- | --- 
 [Collaboration Development Index](./productivity/collaboration-development-index.md#collaboration-development-index) | Use proxy metrics to evaluate how well the development process is managed and how well the community is doing with collaborative development.
+[Community Service and Support](./productivity/community-service-and-support.md#community-service-and-support) | It measures the quality of services and support provided by the community as directly perceived by a developer during the contribution process.
 [Code Security Guarantee](./productivity/code/code-security-guarantee.md#code-security-guarantee) | Coming soon!
 [Code Compliance Guarantee](./productivity/code/code-compliance-guarantee.md#code-compliance-guarantee) | Coming soon!
 [Content](./productivity/content.md#content) | Coming soon!
-[Community Service and Support](./productivity/community-service-and-support.md#community-service-and-support) | It measures the quality of services and support provided by the community as directly perceived by a developer during the contribution process.
 
 ## [**Robustness**](./robustness/README.md)
 Definition: The capability of an ecosystem or project to face and survive disruptions.
@@ -33,8 +33,8 @@ Definition: The capacity to create and recognize meaningful diversity and thereb
 
 Metrics Model Names | Descriptions 
 --- | --- 
-[Developer Attraction](./niche-creation/ecological-diversity/developer-attraction.md#developer-attraction) | Coming soon!
 [Organizations Activity](./niche-creation/ecological-diversity/organization-activity.md#organizations-activity) | It is used to describe how active organizations are in a community.
+[Developer Attraction](./niche-creation/ecological-diversity/developer-attraction.md#developer-attraction) | Coming soon!
 [Technological Advancement](./niche-creation/technological-advancement.md#technological-advancement) | Coming soon!
 
 
