@@ -162,7 +162,7 @@ The threshold we chose is based on the big-data observations from different type
 
 # References
 
-* [CHAOSS Metric Model: Community Activity](https://github.com/chaoss/wg-metrics-models/tree/main/metrics-model-libs/community-activity)
+* [CHAOSS Metric Model: Community Activity](https://chaoss.community/kb/metrics-model-community-activity/)
 
 # Contributors
 ## Frontend

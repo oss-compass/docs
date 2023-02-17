@@ -80,10 +80,10 @@ Largest Eigenvalue | CI Value | RI Value| CR Value | Consistency Test
 
 The threshold we chose is based on the big-data observations from different types of open source projects.
 
-## References
+<!-- ## References
 
-* [CHAOSS Metric Model: Organizations Activity](https://github.com/chaoss/wg-metrics-models/tree/main/metrics-model-libs/organization-activity)
-
+* [CHAOSS Metric Model: Organizations Activity](https://github.com/chaoss/wg-metrics-models/tree/main/metrics-model-libs/organization-activity) 
+-->
 ## Contributors
 
 ### Frontend
