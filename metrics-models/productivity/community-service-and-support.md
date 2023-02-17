@@ -113,7 +113,7 @@ The threshold we chose is based on the big-data observations from different type
 
 ## References
 
-* [CHAOSS Metric Model: Community Service and Support](https://github.com/chaoss/wg-metrics-models/tree/main/metrics-model-libs/community-service-and-support)
+* [CHAOSS Metric Model: Community Service and Support](https://chaoss.community/kb/metrics-model-community-service-and-support/)
 
 ## Contributors
 

@@ -123,7 +123,7 @@ The threshold we chose is based on the big-data observations from different type
 
 # References
 
-* [CHAOSS Metric Model: Community Service and Support](https://github.com/chaoss/wg-metrics-models/tree/main/metrics-model-libs/code-quality-guarantee)
+* [CHAOSS Metric Model: Collaboration Development Index](https://chaoss.community/kb/metrics-model-collaboration-development-index/)
 
 # Contributors
 ## Frontend
