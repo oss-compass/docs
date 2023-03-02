@@ -50,7 +50,7 @@ The more organizations that participate in the project's ongoing contribution, t
 * Definition: Determine how long a repository has existed since it was created (in months).
 * Weight: 7.77%
 * Threshold: 120 months
-* Note: The existence time will be superimposed in the multi-repositories scenario.
+* Note: It's a monotonically increasing metric, so we consider removing it.
 
 We used this metric to see the survival of the project, and the longer it lasted, the more resilient the project was to internal or external disturbances.
 
@@ -122,7 +122,7 @@ Contributor Count | 1 | 1 | 2 | 2 | 3 | 3 | 4 | 4 | 4 | 5 | 6 | 6 | 6
 Commit frequency  | 1 | 1 | 2 | 2 | 3 | 3 | 4 | 4 | 4 | 5 | 6 | 6 | 6
 Updated Since  | 0.5 | 0.5 | 1 | 2 | 2 | 2 | 3 | 3 | 3 | 4 | 5 | 5 | 5
 Org Count | 0.5 | 0.5 | 0.5 | 1 | 2 | 2 | 3 | 3 | 3 | 4 | 5 | 5 | 5
-Created Since | 0.333 | 0.333 | 0.5 | 0.5 | 1 | 1 | 2 | 2 | 2 | 3 | 4 | 4 | 4
+~~Created Since~~ | 0.333 | 0.333 | 0.5 | 0.5 | 1 | 1 | 2 | 2 | 2 | 3 | 4 | 4 | 4
 Comment Frequency | 0.333 | 0.333 | 0.5 | 0.5 | 1 | 1 | 2 | 2 | 2 | 3 | 4 | 4 | 4
 Code Review Count | 0.25 | 0.25 | 0.333 | 0.333 | 0.5 | 0.5 | 1 | 1 | 1 | 2 | 3 | 3 | 3
 ~~Closed Issues Count~~ | 0.25 | 0.25 | 0.333 | 0.333 | 0.5 | 0.5 | 1 | 1 | 1 | 2 | 3 | 3 | 3
@@ -140,7 +140,7 @@ Contributor Count | 2.341 | 18.009%
 Commit frequency | 2.341 | 18.009%
 Updated Since | 1.657 | 12.742%
 Org Count  | 1.495 | 11.501%
-Created Since | 1.010 | 7.768%
+~~Created Since~~ | 1.010 | 7.768%
 Comment Frequency | 1.010 | 7.768%
 Code Review Count | 0.639 | 4.919%
 ~~Closed Issues Count~~| 0.639 | 4.919%
