@@ -105,7 +105,7 @@ Code Review Count  |    0.715 | 10.217%
 
 Largest Eigenvalue | CI Value | RI Value| CR Value | Consistency Test
 --- | --- | --- | --- | ---
-7.002 | 0.000 | 1.360 | 1.360 | PASS
+7.002 | 0.000 | 1.360 | 0.000 | PASS
 
 ### Threshold
 
