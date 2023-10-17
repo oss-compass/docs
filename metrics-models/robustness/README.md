@@ -18,7 +18,7 @@ Metrics Name | Definition | Threshold | Weight
 --- | --- | --- | ---
 [Contributor Count](./activity.md#contributor-count) | Determine how many active code commit authors, pr authors, review participants, issue authors, and issue comments participants there are in the past 90 days | 2000 | 18.009%
 [Commit frequency](./activity.md#commit-frequency) |Determine the average number of commits per week in the past 90 days.| 1000 | 18.009%
-[Updated Since](./activity.md#updated-since) |Determine the average time per repository since the repository was last updated (in months).| 0.25 | 12.742%
+[Updated Since](./activity.md#updated-since) |Determine the average time per repository since the repository was last updated (in months).| 0.25 | -12.742%
 [Org Count](./activity.md#organization-count)  | Number of organizations to which active code contributors belong in the past 90 days. |10|11.501%
 [Created Since](./activity.md#created-since) |Determine how long a repository has existed since it was created (in months).|120|7.768%
 [Issue Comment Frequency](./activity.md#issue-comment-frequency) |Determine the average number of comments per issue created in the last 90 days.|5|7.768%
