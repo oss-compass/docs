@@ -34,7 +34,7 @@ As an outcome indicator of this model, it identifies the sustainability and quan
 
 ## Updated Since
 * Definition: Determine the average time per repository since the repository was last updated (in months).
-* Weight: 12.74%
+* Weight: -12.74%
 * Threshold: 0.25 months
 
 This metric is used to indicate how often the project is updated. It identifies good communities for development collaboration and management, and makes frequent iterative and incremental development to promote continuous improvement in software quality. But the industr domains of a software project also determines that the frequency of its iterations is not always as high as possible, some Linux distribution projects, for example, exhibit a very typical pattern of code iterations with periodic release planning. Here we focus on the trend of the project during each cycle, and the relative results compared with the projects belong to the similar domains.
@@ -138,7 +138,7 @@ Metrics Name | Eigenvector | Weight
 --- | --- | ---
 Contributor Count | 2.341 | 18.009%
 Commit frequency | 2.341 | 18.009%
-Updated Since | 1.657 | 12.742%
+Updated Since | 1.657 | -12.742%
 Org Count  | 1.495 | 11.501%
 ~~Created Since~~ | 1.010 | 7.768%
 Comment Frequency | 1.010 | 7.768%

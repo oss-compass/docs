@@ -33,7 +33,7 @@ The more code you contribute, the more PR requests you need to close (accept or 
 ### Issue First Response
 
 * Definition: Average/Median first comments response (in days) for new issues created in the last 90 days. This excludes bot responses,, the creator's own comment, or an action assigned by the issue. If the issue has been unanswered, the first response time is not counted.
-* Weight: 14.372%
+* Weight: -14.372%
 * Threshold: 15 days
 
 We use this indicator to sense "Community temperature". And for contributors who join the community, if their questions are answered in a timely manner by the community, there's a good chance that they would be retained and continue to contribute to the community (according to [Mozilla Research](https://docs.google.com/presentation/d/1hsJLv1ieSqtXBzd5YZusY-mB8e1VJzaeOmh8Q4VeMio/edit#slide=id.g43d857af8_0177)) . At the same time, we found that more and more robots have been used to assist with Issue processing in recent years, so we eliminated robot interference and focused on human replies.
@@ -41,7 +41,7 @@ We use this indicator to sense "Community temperature". And for contributors who
 ### Bug Issue Open Time
 
 * Definition: Average/Median time (days) that bug issues have been opened for issues created in the last 90 days.
-* Weight: 12.88%
+* Weight: -12.88%
 * Threshold: 60 days
 * Note: Issue that labeled by Bugs.
 
@@ -50,7 +50,7 @@ The Bug type Issue represents how efficiently the community handles issues that 
 ### PR Open Time
 
 * Definition: Average/Median processing time (days) for new change requests created in the last 90 days, including closed/accepted change requests and unresolved change requests.
-* Weight: 12.88%
+* Weight: -12.88%
 * Threshold: 30 days
 
 We are seeking for the change request fast close, including code merged or rejected. Otherwise the longer it takes for a change request to be resolved, the greater the risk that merge-conflict will occur, while other change requests that depend on it will also be stalled. 
@@ -95,9 +95,9 @@ Metrics Name | Eigenvector | Weight
 --- | --- | ---
 Updated Issues Count|   1.380 | 19.721%
 Close PR Count        | 1.380 | 19.721%
-Issue First Response |  1.006 | 14.372%
-Bug Issue Open Time |   0.901 | 12.876%
-PR Open Time        |   0.901 | 12.876%
+Issue First Response |  1.006 | -14.372%
+Bug Issue Open Time |   0.901 | -12.876%
+PR Open Time        |   0.901 | -12.876%
 Comment Frequency  |    0.715 | 10.217%
 Code Review Count  |    0.715 | 10.217%
 
