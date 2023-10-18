@@ -312,7 +312,7 @@ You can refer to or use our docker-compose to deploy or manually go to opensearc
         version: '3'
         services:
           mariadb:
-            image: mariadb:10.0
+            image: mariadb:10.4.26
             expose:
               - 3306
             ports:
