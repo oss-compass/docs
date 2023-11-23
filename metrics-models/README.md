@@ -18,11 +18,6 @@ Definition: The capability of an ecosystem or project to face and survive disrup
 Metrics Model Names | Descriptions 
 --- | --- 
 [Activity](./robustness/activity.md#activity) | Community Activity is used to describe how active an open source community is.
-[Developer Convertion](./robustness/developer/developer-convertion.md#developer-convertion) | Coming soon!
-[Developer Retention](./robustness/developer/developer-retention.md#developer-retention) | Coming soon!
-[Inner Connectedness](./robustness/organization/innner-connectedness.md#inner-connectedness) | Coming soon!
-[Organization Collaboration Relationships](./robustness/organization/organization-collaboration-relationships.md#organization-collaboration-relationships) | Coming soon!
-[Outbound Connectedness](./robustness/organization/outbound-connectedness.md) | Coming soon!
 
 
 ## [**Niche Creation**](./niche-creation/README.md)
@@ -31,8 +26,6 @@ Definition: The capacity to create and recognize meaningful diversity and thereb
 Metrics Model Names | Descriptions 
 --- | --- 
 [Organizations Activity](./niche-creation/ecological-diversity/organization-activity.md#organizations-activity) | It is used to describe how active organizations are in a community.
-[Developer Attraction](./niche-creation/ecological-diversity/developer-attraction.md#developer-attraction) | Coming soon!
-[Technological Advancement](./niche-creation/technological-advancement.md#technological-advancement) | Coming soon!
 
 
 ## References:
