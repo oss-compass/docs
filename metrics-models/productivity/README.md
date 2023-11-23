@@ -25,18 +25,6 @@ Metrics Name | Definition | Threshold | Weight
 [Code Merge Ratio](./collaboration-development-index.md#code-merge-ratio) |Determine the percentage of PR Mergers and PR authors who are not the same person in the last 90 days of commits.|100%| 10.113%
 [Lines of Code Frequency](./collaboration-development-index.md#lines-of-code-frequency) |Determine the average number of lines touched (lines added plus lines removed) per week in the past 90 days. |300000| 5.640%
 
-## [Code Security Guarantee](./code/code-security-guarantee.md#code-security-guarantee)
-
-Coming soon!
-
-
-## [Code Compliance Guarantee](./code/code-compliance-guarantee.md#code-compliance-guarantee)
-
-Coming soon!
-
-## [Content](./content.md#content)
-
-Coming soon!
 
 ## [Community Service and Support](./community-service-and-support.md#community-service-and-support)
 

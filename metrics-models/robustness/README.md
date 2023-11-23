@@ -28,23 +28,3 @@ Metrics Name | Definition | Threshold | Weight
 [Maintainer Count](./activity.md#maintainer-count) | Determine the average number of maintainers per repository.|100|2.090%
 [Meeting Count](./activity.md#meeting-count) | Determine the number of meetings held in the last 90 days.| 100| 2.090%
 [Meeting Attendee Count](./activity.md#meeting-attendee-count) | Determine the average number of attendees per meeting in the last 90 days.|10| 2.090%
-
-## [Developer Convertion](./developer/developer-convertion.md#developer-convertion)
-
-Coming soon!
-
-## [Developer Retention](./developer/developer-retention.md#developer-retention)
-
-Coming soon!
-
-## [Inner Connectedness](./organization/innner-connectedness.md#inner-connectedness)
-
-Coming soon!
-
-## [Organization Collaboration Relationships](./organization/organization-collaboration-relationships.md#organization-collaboration-relationships)
-
-Coming soon!
-
-## [Outbound Connectedness](./organization/outbound-connectedness.md)
-
-Coming soon!
