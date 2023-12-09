@@ -1,8 +1,9 @@
 ---
 title: Activity
-slug: /metrics-models/robustness/activity
+slug: /metrics-models/collaboration/robustness/activity
 tags:
   - Metrics Models
+  - Collaboration
   - Robustness
   - Activity
 description: Describe how active an open source community is.

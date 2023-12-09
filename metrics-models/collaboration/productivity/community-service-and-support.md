@@ -1,8 +1,9 @@
 ---
 title: Community Service and Support
-slug: /metrics-models/productivity/community-service-and-support
+slug: /metrics-models/collaboration/productivity/community-service-and-support
 tags:
   - Metrics Models
+  - Collaboration
   - Productivity
   - Community Service and Support
 description: Community Service and Support measures the quality of services and support provided by the community as directly perceived by a developer during the contribution process.

@@ -1,8 +1,9 @@
 ---
-title: Productivity
-slug: /dimensions-define/productivity
+title: Collaboration - Productivity
+slug: /dimensions-define/collaboration/productivity
 tags:
   - Metrics Models
+  - Collaboration
   - Productivity
 description: The efficiency with which an ecosystem or project converts inputs into output.
 ---
