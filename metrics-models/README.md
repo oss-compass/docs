@@ -1,31 +1,43 @@
 # Ecosystem Evaluation System
 
-Ecosystem is used to describe the health status of open source community standing from ecology context. We create three top level dimensions: Productivity, Robustness and Niche Creation. 
+Ecosystem is used to describe the health status of open source community standing from ecology context. We create a [three-dimensional space for the evaluation system](https://compass.gitee.com/zh/blog/2023/12/09/open-source-eco2/open-source-eco2), including the open source ecosystem, "collaboration, people, software" and evaluation models.
+
+![image](https://github.com/oss-compass/docs/assets/53640896/49b62460-f642-4b96-89ec-7775ce81d528)
 
 # Dimensions
 
-## [**Productivity**](./productivity/README.md)
+## [**Collaboration - Productivity**](./collaboration/productivity/README.md)
 Definition: The efficiency with which an ecosystem or project converts inputs into output.
 
 Metrics Model Names | Descriptions 
 --- | --- 
-[Collaboration Development Index](./productivity/collaboration-development-index.md#collaboration-development-index) | Use proxy metrics to evaluate how well the development process is managed and how well the community is doing with collaborative development.
-[Community Service and Support](./productivity/community-service-and-support.md#community-service-and-support) | It measures the quality of services and support provided by the community as directly perceived by a developer during the contribution process.
+[Collaboration Development Index](./collaboration/productivity/collaboration-development-index.md#collaboration-development-index) | Use proxy metrics to evaluate how well the development process is managed and how well the community is doing with collaborative development.
+[Community Service and Support](./collaboration/productivity/community-service-and-support.md#community-service-and-support) | It measures the quality of services and support provided by the community as directly perceived by a developer during the contribution process.
 
-## [**Robustness**](./robustness/README.md)
+## [**Collaboration - Robustness**](./collaboration/robustness/README.md)
 Definition: The capability of an ecosystem or project to face and survive disruptions.
 
 Metrics Model Names | Descriptions 
 --- | --- 
-[Activity](./robustness/activity.md#activity) | Community Activity is used to describe how active an open source community is.
+[Activity](./collaboration/robustness/activity.md#activity) | Community Activity is used to describe how active an open source community is.
 
 
-## [**Niche Creation**](./niche-creation/README.md)
+## [**Collaboration - Niche Creation**](./collaboration/niche-creation/README.md)
 Definition: The capacity to create and recognize meaningful diversity and thereby new capabilities.
 
 Metrics Model Names | Descriptions 
 --- | --- 
-[Organizations Activity](./niche-creation/ecological-diversity/organization-activity.md#organizations-activity) | It is used to describe how active organizations are in a community.
+[Organizations Activity](./collaboration/niche-creation/organization-activity.md#organizations-activity) | It is used to describe how active organizations are in a community.
+
+## [**People-Productivity**](./people/productivity/README.md)
+
+定义：The efficiency with which an ecosystem or project converts inputs into output.
+
+Metrics Model Names | Descriptions 
+--- | --- 
+| [Contributor Domain Persona](./people/productivity/contributor-domain-persona.md) |  |
+| [Contributor Milestone Persona](./people/productivity/contributor-milestone-persona.md) |  |
+| [Contributor Role Persona](./people/productivity/contributor-role-persona.md) |  |
 
 
 ## References:

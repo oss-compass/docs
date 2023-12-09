@@ -1,8 +1,9 @@
 ---
 title: Collaboration Development Index
-slug: /metrics-models/productivity/collaboration-development-index
+slug: /metrics-models/collaboration/productivity/collaboration-development-index
 tags:
   - Metrics Models
+  - Collaboration
   - Productivity
   - Collaboration Development Index
 description: Use proxy metrics to evaluate how well the development process is managed and how well the community is doing with collaborative development

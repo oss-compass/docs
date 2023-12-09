@@ -1,8 +1,9 @@
 ---
 title: Organizations Activity
-slug: /metrics-models/niche-creation/organization-activity
+slug: /metrics-models/collaboration/niche-creation/organization-activity
 tags:
   - Metrics Models
+  - Collaboration
   - Niche Creation
   - Organizations Activity
 description: Describe how active organizations are in a community.

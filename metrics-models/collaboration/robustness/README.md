@@ -1,8 +1,9 @@
 ---
 title: Robustness
-slug: /dimensions-define/robustness
+slug: /dimensions-define/collaboration/robustness
 tags:
   - Metrics Models
+  - Collaboration
   - Robustness
 description: The capability of an ecosystem or project to face and survive disruptions.Determine
 ---
