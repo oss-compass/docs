@@ -6,7 +6,6 @@ tags:
   - people
   - Productivity
   - Contributor Domain Persona
-description: 
 ---
 
 # Contributor Domain Persona
@@ -30,46 +29,43 @@ For observation-type contributions, issue-type contributions, and code-type cont
 - Event-type contributions: Our data currently depends on manual input, including online and offline events.
 - Sponsor: Cash donations.
 
-
 # Metrics in the Metrics Model
 
 ## Code Contributor Count
 
-* Definition: How many active code class contributors in the last 90 days.
-* Weight: 16%
-* Threshold: 500
+- Definition: How many active code class contributors in the last 90 days.
+- Weight: 16%
+- Threshold: 500
 
 ## Code Contribution Count
 
-* Definition: The number of contributions per capita for contributors in the active code class in the last 90 days.
-* Weight: 24%
-* Threshold: 15
+- Definition: The number of contributions per capita for contributors in the active code class in the last 90 days.
+- Weight: 24%
+- Threshold: 15
 
 ## Issue Contributor Count
 
-* Definition: How many active issue class contributors in the last 90 days.
-* Weight: 16%
-* Threshold: 1000
+- Definition: How many active issue class contributors in the last 90 days.
+- Weight: 16%
+- Threshold: 1000
 
 ## Issue Contribution Count
 
-* Definition: The number of contributions per capita for contributors in the active issue class in the last 90 days.
-* Weight: 24%
-* Threshold: 10
+- Definition: The number of contributions per capita for contributors in the active issue class in the last 90 days.
+- Weight: 24%
+- Threshold: 10
 
 ## Observation Contributor Count
 
-* Definition: How many active observation class contributors in the last 90 days.
-* Weight: 8%
-* Threshold: 2000
+- Definition: How many active observation class contributors in the last 90 days.
+- Weight: 8%
+- Threshold: 2000
 
 ## Observation Contribution Count
 
-* Definition: The number of contributions per capita for contributors in the active observation class in the last 90 days.
-* Weight: 12%
-* Threshold: 2
-
-
+- Definition: The number of contributions per capita for contributors in the active observation class in the last 90 days.
+- Weight: 12%
+- Threshold: 2
 
 # Metric Model Algorithm
 
@@ -79,31 +75,31 @@ We use [AHP](https://en.wikipedia.org/wiki/Analytic_hierarchy_process) to calcul
 
 ### AHP Input Data
 
-Metric Name | Code Contributor Count | Code Contribution Count | Issue Contributor Count | Issue Contribution Count | Observation Contributor Count | Observation Contribution Count |
-| --- | --- | --- | --- | --- | --- | --- |
-| Code Contributor Count  | 1.000 | 0.667 | 1.000 | 0.667 | 2.000 | 1.333 |
-| Code Contribution Count | 1.500 | 1.000 | 1.500 | 1.000 | 3.000 | 2.000 |
-| Issue Contributor Count | 1.000 | 0.667 | 1.000 | 0.667 | 2.000 | 1.333 |
-| Issue Contribution Count  | 1.500 | 1.000 | 1.500 | 1.000 | 3.000 | 2.000 |
-| Observation Contributor Count | 0.800 | 0.500 | 0.333 | 0.500 | 0.333 | 1.000 | 0.667 |
-| Observation Contribution Count  | 0.750 | 0.500 | 0.750 | 0.500 | 1.500 | 1.000 |
+| Metric Name                    | Code Contributor Count | Code Contribution Count | Issue Contributor Count | Issue Contribution Count | Observation Contributor Count | Observation Contribution Count |
+| ------------------------------ | ---------------------- | ----------------------- | ----------------------- | ------------------------ | ----------------------------- | ------------------------------ | ----- |
+| Code Contributor Count         | 1.000                  | 0.667                   | 1.000                   | 0.667                    | 2.000                         | 1.333                          |
+| Code Contribution Count        | 1.500                  | 1.000                   | 1.500                   | 1.000                    | 3.000                         | 2.000                          |
+| Issue Contributor Count        | 1.000                  | 0.667                   | 1.000                   | 0.667                    | 2.000                         | 1.333                          |
+| Issue Contribution Count       | 1.500                  | 1.000                   | 1.500                   | 1.000                    | 3.000                         | 2.000                          |
+| Observation Contributor Count  | 0.800                  | 0.500                   | 0.333                   | 0.500                    | 0.333                         | 1.000                          | 0.667 |
+| Observation Contribution Count | 0.750                  | 0.500                   | 0.750                   | 0.500                    | 1.500                         | 1.000                          |
 
 ### AHP Analysis Result
 
-Metrics Name | Eigenvector | Weight
---- | --- | ---
-| Code Contributor Count | 0.960 | 16.000% |
-| Code Contribution Count | 1.440 | 24.000% |
-| Issue Contributor Count | 0.960 | 16.000% |
-| Issue Contribution Count | 1.440 | 24.000% |
-| Observation Contributor Count | 0.480 | 8.000% |
-| Observation Contribution Count | 0.720 | 12.000% |
+| Metrics Name                   | Eigenvector | Weight  |
+| ------------------------------ | ----------- | ------- |
+| Code Contributor Count         | 0.960       | 16.000% |
+| Code Contribution Count        | 1.440       | 24.000% |
+| Issue Contributor Count        | 0.960       | 16.000% |
+| Issue Contribution Count       | 1.440       | 24.000% |
+| Observation Contributor Count  | 0.480       | 8.000%  |
+| Observation Contribution Count | 0.720       | 12.000% |
 
 ### Consistency Test Results
 
-Largest Eigenvalue | CI Value | RI Value| CR Value | Consistency Test
---- | --- | --- | --- | ---
-| 6.000 | 0.000 | 1.260 | 0.000 | PASS    |
+| Largest Eigenvalue | CI Value | RI Value | CR Value | Consistency Test |
+| ------------------ | -------- | -------- | -------- | ---------------- |
+| 6.000              | 0.000    | 1.260    | 0.000    | PASS             |
 
 ## Threshold
 
@@ -111,26 +107,27 @@ The threshold we chose is based on the big-data observations from different type
 
 # References
 
-* [Reflections on the Evaluation and Measurement of Open Source Ecosystem (1) — Evolution and Trends](https://oss-compass.org/blog/2023/12/09/open-source-eco1/open-source-eco1)
-* [ Reflections on the Evaluation and Measurement of Open Source Ecosystem (2) - The Multidimensional Space of Evaluation Systems](https://oss-compass.org/blog/2023/12/09/open-source-eco2/open-source-eco2)
-* [Reflections on the Evaluation and Measurement of Open Source Ecosystem (3) - Dynamics and Statics of Contributors](https://oss-compass.org/blog/2023/12/09/open-source-eco3/open-source-eco3)
+- [Reflections on the Evaluation and Measurement of Open Source Ecosystem (1) — Evolution and Trends](https://oss-compass.org/blog/2023/12/09/open-source-eco1/open-source-eco1)
+- [ Reflections on the Evaluation and Measurement of Open Source Ecosystem (2) - The Multidimensional Space of Evaluation Systems](https://oss-compass.org/blog/2023/12/09/open-source-eco2/open-source-eco2)
+- [Reflections on the Evaluation and Measurement of Open Source Ecosystem (3) - Dynamics and Statics of Contributors](https://oss-compass.org/blog/2023/12/09/open-source-eco3/open-source-eco3)
 
 # Contributors
+
 ## Frontend
 
-* Shengxiang Zhang
-* Feng Zhong
-* Xingyou Lai
+- Shengxiang Zhang
+- Feng Zhong
+- Xingyou Lai
 
 ## Backend
 
-* Yehui Wang
-* Shengxiang Zhang
-* Shengbao Li
-* Huatian Qin
+- Yehui Wang
+- Shengxiang Zhang
+- Shengbao Li
+- Huatian Qin
 
 ## Metric Model
 
-* Yehui Wang
-* Liang Wang
-* Shengbao Li
+- Yehui Wang
+- Liang Wang
+- Shengbao Li

@@ -6,7 +6,6 @@ tags:
   - people
   - Productivity
   - Contributor Milestone Persona
-description: 
 ---
 
 # Contributor Milestone Persona
@@ -23,47 +22,43 @@ Based on contributors' contribution amount, contribution frequency, contribution
 - Silent: Contributors who were active as core, regular, or visitors in the previous year but have made no contributions in the current year.
 - No State: People who have never made contributions in the community.
 
-
-
 # Metrics in the Metrics Model
 
 ## Core Contributor Count
 
-* Definition: How many active core contributors in the last 90 days.
-* Weight: 20%
-* Threshold: 20
+- Definition: How many active core contributors in the last 90 days.
+- Weight: 20%
+- Threshold: 20
 
 ## Core Contribution Count
 
-* Definition: The number of contributions per capita for contributors in the active core in the last 90 days.
-* Weight: 30%
-* Threshold: 200
+- Definition: The number of contributions per capita for contributors in the active core in the last 90 days.
+- Weight: 30%
+- Threshold: 200
 
 ## Regular Contributor Count
 
-* Definition: How many active regular contributors in the last 90 days.
-* Weight: 12%
-* Threshold: 100
+- Definition: How many active regular contributors in the last 90 days.
+- Weight: 12%
+- Threshold: 100
 
 ## Regular Contribution Count
 
-* Definition: The number of contributions per capita for contributors in the active regular in the last 90 days.
-* Weight: 18%
-* Threshold: 25
+- Definition: The number of contributions per capita for contributors in the active regular in the last 90 days.
+- Weight: 18%
+- Threshold: 25
 
 ## Visitor Contributor Count
 
-* Definition: How many active visitor contributors in the last 90 days.
-* Weight: 8%
-* Threshold: 2000
+- Definition: How many active visitor contributors in the last 90 days.
+- Weight: 8%
+- Threshold: 2000
 
 ## Visitor Contribution Count
 
-* Definition: The number of contributions per capita for contributors in the active visitor in the last 90 days.
-* Weight: 12%
-* Threshold: 5
-
-
+- Definition: The number of contributions per capita for contributors in the active visitor in the last 90 days.
+- Weight: 12%
+- Threshold: 5
 
 # Metric Model Algorithm
 
@@ -73,31 +68,31 @@ We use [AHP](https://en.wikipedia.org/wiki/Analytic_hierarchy_process) to calcul
 
 ### AHP Input Data
 
-Metric Name  | Core Contributor Count | Core Contribution Count | Regular Contributor Count | Regular Contribution Count | Visitor Contributor Count | Visitor Contribution Count |
-| --- | --- | --- | --- | --- | --- | --- |
-| Core Contributor Count | 1.000 | 0.667 | 1.667 | 1.111 | 2.500 | 1.667 |
-| Core Contribution Count | 1.500 | 1.000 | 2.500 | 1.667 | 3.750 | 2.500 |
-| Regular Contributor Count | 0.600 | 0.400 | 1.000 | 0.667 | 1.500 | 1.000 |
-| Regular Contribution Count | 0.900 | 0.600 | 1.500 | 1.000 | 2.250 | 1.500 |
-| Visitor Contributor Count | 0.400 | 0.267 | 0.667 | 0.444 | 1.000 | 0.667 |
-| Visitor Contribution Count | 0.600 | 0.400 | 1.000 | 0.667 | 1.500 | 1.000 |
+| Metric Name                | Core Contributor Count | Core Contribution Count | Regular Contributor Count | Regular Contribution Count | Visitor Contributor Count | Visitor Contribution Count |
+| -------------------------- | ---------------------- | ----------------------- | ------------------------- | -------------------------- | ------------------------- | -------------------------- |
+| Core Contributor Count     | 1.000                  | 0.667                   | 1.667                     | 1.111                      | 2.500                     | 1.667                      |
+| Core Contribution Count    | 1.500                  | 1.000                   | 2.500                     | 1.667                      | 3.750                     | 2.500                      |
+| Regular Contributor Count  | 0.600                  | 0.400                   | 1.000                     | 0.667                      | 1.500                     | 1.000                      |
+| Regular Contribution Count | 0.900                  | 0.600                   | 1.500                     | 1.000                      | 2.250                     | 1.500                      |
+| Visitor Contributor Count  | 0.400                  | 0.267                   | 0.667                     | 0.444                      | 1.000                     | 0.667                      |
+| Visitor Contribution Count | 0.600                  | 0.400                   | 1.000                     | 0.667                      | 1.500                     | 1.000                      |
 
 ### AHP Analysis Result
 
-Metrics Name | Eigenvector | Weight
---- | --- | ---
-| Core Contributor Count | 1.200 | 20.000% |
-| Core Contribution Count | 1.800 | 30.000% |
-| Regular Contributor Count | 0.720 | 12.000% |
-| Regular Contribution Count | 1.080 | 18.000% |
-| Visitor Contributor Count | 0.480 | 8.000% |
-| Visitor Contribution Count | 0.720 | 12.000% |
+| Metrics Name               | Eigenvector | Weight  |
+| -------------------------- | ----------- | ------- |
+| Core Contributor Count     | 1.200       | 20.000% |
+| Core Contribution Count    | 1.800       | 30.000% |
+| Regular Contributor Count  | 0.720       | 12.000% |
+| Regular Contribution Count | 1.080       | 18.000% |
+| Visitor Contributor Count  | 0.480       | 8.000%  |
+| Visitor Contribution Count | 0.720       | 12.000% |
 
 ### Consistency Test Results
 
-Largest Eigenvalue | CI Value | RI Value| CR Value | Consistency Test
---- | --- | --- | --- | ---
-| 6.000 | 0.000 | 1.260 | 0.000 | PASS    |
+| Largest Eigenvalue | CI Value | RI Value | CR Value | Consistency Test |
+| ------------------ | -------- | -------- | -------- | ---------------- |
+| 6.000              | 0.000    | 1.260    | 0.000    | PASS             |
 
 ## Threshold
 
@@ -105,26 +100,27 @@ The threshold we chose is based on the big-data observations from different type
 
 # References
 
-* [Reflections on the Evaluation and Measurement of Open Source Ecosystem (1) — Evolution and Trends](https://oss-compass.org/blog/2023/12/09/open-source-eco1/open-source-eco1)
-* [ Reflections on the Evaluation and Measurement of Open Source Ecosystem (2) - The Multidimensional Space of Evaluation Systems](https://oss-compass.org/blog/2023/12/09/open-source-eco2/open-source-eco2)
-* [Reflections on the Evaluation and Measurement of Open Source Ecosystem (3) - Dynamics and Statics of Contributors](https://oss-compass.org/blog/2023/12/09/open-source-eco3/open-source-eco3)
+- [Reflections on the Evaluation and Measurement of Open Source Ecosystem (1) — Evolution and Trends](https://oss-compass.org/blog/2023/12/09/open-source-eco1/open-source-eco1)
+- [ Reflections on the Evaluation and Measurement of Open Source Ecosystem (2) - The Multidimensional Space of Evaluation Systems](https://oss-compass.org/blog/2023/12/09/open-source-eco2/open-source-eco2)
+- [Reflections on the Evaluation and Measurement of Open Source Ecosystem (3) - Dynamics and Statics of Contributors](https://oss-compass.org/blog/2023/12/09/open-source-eco3/open-source-eco3)
 
 # Contributors
+
 ## Frontend
 
-* Shengxiang Zhang
-* Feng Zhong
-* Xingyou Lai
+- Shengxiang Zhang
+- Feng Zhong
+- Xingyou Lai
 
 ## Backend
 
-* Yehui Wang
-* Shengxiang Zhang
-* Shengbao Li
-* Huatian Qin
+- Yehui Wang
+- Shengxiang Zhang
+- Shengbao Li
+- Huatian Qin
 
 ## Metric Model
 
-* Yehui Wang
-* Liang Wang
-* Shengbao Li
+- Yehui Wang
+- Liang Wang
+- Shengbao Li

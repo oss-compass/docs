@@ -6,7 +6,6 @@ tags:
   - people
   - Productivity
   - Contributor Role Persona
-description: 
 ---
 
 # Contributor Role Persona
@@ -26,36 +25,31 @@ Determining whether a contributor is a manager is based on whether they have mad
   - Organizational Participants
   - Individual Participants
 
-
-
-
 # Metrics in the Metrics Model
 
 ## Organizational Contributor Count
 
-* Definition: How many active organizational contributors in the last 90 days.
-* Weight: 20%
-* Threshold: 1500
+- Definition: How many active organizational contributors in the last 90 days.
+- Weight: 20%
+- Threshold: 1500
 
 ## Organizational Contribution Count
 
-* Definition: The number of contributions per capita for contributors in the active organizational in the last 90 days.
-* Weight: 30%
-* Threshold: 10
+- Definition: The number of contributions per capita for contributors in the active organizational in the last 90 days.
+- Weight: 30%
+- Threshold: 10
 
 ## Individual Contributor Count
 
-* Definition: How many active individual contributors in the last 90 days.
-* Weight: 20%
-* Threshold: 3500
+- Definition: How many active individual contributors in the last 90 days.
+- Weight: 20%
+- Threshold: 3500
 
 ## Individual Contribution Count
 
-* Definition: The number of contributions per capita for contributors in the active individual in the last 90 days.
-* Weight: 30%
-* Threshold: 5
-
-
+- Definition: The number of contributions per capita for contributors in the active individual in the last 90 days.
+- Weight: 30%
+- Threshold: 5
 
 # Metric Model Algorithm
 
@@ -65,28 +59,27 @@ We use [AHP](https://en.wikipedia.org/wiki/Analytic_hierarchy_process) to calcul
 
 ### AHP Input Data
 
-Metric Name  | Organizational Contributor Count | Organizational Contribution Count | Individual Contributor Count | Individual Contribution Count |
-| --- | --- | --- | --- | --- |
-| Organizational Contributor Count | 1.000 | 0.667 | 1.000 | 0.667 |
-| Organizational Contribution Count | 1.500 | 1.000 | 1.500 | 1.000 |
-| Individual Contributor Count | 1.000 | 0.667 | 1.000 | 0.667 |
-| Individual Contribution Count | 1.500 | 1.000 | 1.500 | 1.000 |
-
+| Metric Name                       | Organizational Contributor Count | Organizational Contribution Count | Individual Contributor Count | Individual Contribution Count |
+| --------------------------------- | -------------------------------- | --------------------------------- | ---------------------------- | ----------------------------- |
+| Organizational Contributor Count  | 1.000                            | 0.667                             | 1.000                        | 0.667                         |
+| Organizational Contribution Count | 1.500                            | 1.000                             | 1.500                        | 1.000                         |
+| Individual Contributor Count      | 1.000                            | 0.667                             | 1.000                        | 0.667                         |
+| Individual Contribution Count     | 1.500                            | 1.000                             | 1.500                        | 1.000                         |
 
 ### AHP Analysis Result
 
-Metrics Name | Eigenvector | Weight
---- | --- | ---
-| Organizational Contributor Count | 0.800 | 20.000% |
-| Organizational Contribution Count | 1.200 | 30.000% |
-| Individual Contributor Count | 0.800 | 20.000% |
-| Individual Contribution Count | 1.200 | 30.000% |
+| Metrics Name                      | Eigenvector | Weight  |
+| --------------------------------- | ----------- | ------- |
+| Organizational Contributor Count  | 0.800       | 20.000% |
+| Organizational Contribution Count | 1.200       | 30.000% |
+| Individual Contributor Count      | 0.800       | 20.000% |
+| Individual Contribution Count     | 1.200       | 30.000% |
 
 ### Consistency Test Results
 
-Largest Eigenvalue | CI Value | RI Value| CR Value | Consistency Test
---- | --- | --- | --- | ---
-| 4.000 | 0.000 | 0.890 | 0.000 | PASS    |
+| Largest Eigenvalue | CI Value | RI Value | CR Value | Consistency Test |
+| ------------------ | -------- | -------- | -------- | ---------------- |
+| 4.000              | 0.000    | 0.890    | 0.000    | PASS             |
 
 ## Threshold
 
@@ -94,26 +87,27 @@ The threshold we chose is based on the big-data observations from different type
 
 # References
 
-* [Reflections on the Evaluation and Measurement of Open Source Ecosystem (1) — Evolution and Trends](https://oss-compass.org/blog/2023/12/09/open-source-eco1/open-source-eco1)
-* [ Reflections on the Evaluation and Measurement of Open Source Ecosystem (2) - The Multidimensional Space of Evaluation Systems](https://oss-compass.org/blog/2023/12/09/open-source-eco2/open-source-eco2)
-* [Reflections on the Evaluation and Measurement of Open Source Ecosystem (3) - Dynamics and Statics of Contributors](https://oss-compass.org/blog/2023/12/09/open-source-eco3/open-source-eco3)
+- [Reflections on the Evaluation and Measurement of Open Source Ecosystem (1) — Evolution and Trends](https://oss-compass.org/blog/2023/12/09/open-source-eco1/open-source-eco1)
+- [ Reflections on the Evaluation and Measurement of Open Source Ecosystem (2) - The Multidimensional Space of Evaluation Systems](https://oss-compass.org/blog/2023/12/09/open-source-eco2/open-source-eco2)
+- [Reflections on the Evaluation and Measurement of Open Source Ecosystem (3) - Dynamics and Statics of Contributors](https://oss-compass.org/blog/2023/12/09/open-source-eco3/open-source-eco3)
 
 # Contributors
+
 ## Frontend
 
-* Shengxiang Zhang
-* Feng Zhong
-* Xingyou Lai
+- Shengxiang Zhang
+- Feng Zhong
+- Xingyou Lai
 
 ## Backend
 
-* Yehui Wang
-* Shengxiang Zhang
-* Shengbao Li
-* Huatian Qin
+- Yehui Wang
+- Shengxiang Zhang
+- Shengbao Li
+- Huatian Qin
 
 ## Metric Model
 
-* Yehui Wang
-* Liang Wang
-* Shengbao Li
+- Yehui Wang
+- Liang Wang
+- Shengbao Li
