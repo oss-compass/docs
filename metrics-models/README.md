@@ -1,6 +1,6 @@
 # Ecosystem Evaluation System
 
-Ecosystem is used to describe the health status of open source community standing from ecology context. We create a [three-dimensional space for the evaluation system](https://compass.gitee.com/zh/blog/2023/12/09/open-source-eco2/open-source-eco2), including the open source ecosystem, "collaboration, people, software" and evaluation models.
+Ecosystem is used to describe the health status of open source community standing from ecology context. We create a [three-dimensional space for the evaluation system](https://oss-compass.org/blog/2023/12/09/open-source-eco2/open-source-eco2), including the open source ecosystem, "collaboration, people, software" and evaluation models.
 
 ![image](https://github.com/oss-compass/docs/assets/53640896/49b62460-f642-4b96-89ec-7775ce81d528)
 
