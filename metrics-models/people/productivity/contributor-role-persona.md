@@ -87,8 +87,8 @@ The threshold we chose is based on the big-data observations from different type
 
 # References
 
-- [Reflections on the Evaluation and Measurement of Open Source Ecosystem (1) — Evolution and Trends](https://oss-compass.org/blog/2023/12/09/open-source-eco1/open-source-eco1)
-- [ Reflections on the Evaluation and Measurement of Open Source Ecosystem (2) - The Multidimensional Space of Evaluation Systems](https://oss-compass.org/blog/2023/12/09/open-source-eco2/open-source-eco2)
+- [Reflections on the Evaluation and Measurement of Open Source Ecosystem (1) — Evolution and Trends](https://oss-compass.org/blog/2023/12/07/open-source-eco1/open-source-eco1)
+- [ Reflections on the Evaluation and Measurement of Open Source Ecosystem (2) - The Multidimensional Space of Evaluation Systems](https://oss-compass.org/blog/2023/12/08/open-source-eco2/open-source-eco2)
 - [Reflections on the Evaluation and Measurement of Open Source Ecosystem (3) - Dynamics and Statics of Contributors](https://oss-compass.org/blog/2023/12/09/open-source-eco3/open-source-eco3)
 
 # Contributors
