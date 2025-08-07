@@ -118,7 +118,7 @@ We use the following parameters to calculate the criticality score of an open so
 
 The criticality score of an open source project defines its influence and importance. It is a number between 0 (least critical) and 1 (most critical). The score is based on an [algorithm](https://github.com/ossf/criticality_score/blob/main/Quantifying_criticality_algorithm.pdf) proposed by [Rob Pike](https://github.com/robpike):
 
-<img src="https://raw.githubusercontent.com/ossf/criticality_score/main/images/formula.png" width="359" height="96">
+<img src="https://raw.githubusercontent.com/ossf/criticality_score/main/images/formula.png" width="359" height="96" />
 
 Where:
 - &alpha;i is the weight of each metric
