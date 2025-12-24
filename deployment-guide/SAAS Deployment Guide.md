@@ -584,74 +584,79 @@ please use pip install follow packages:
 1.  create database manually: `compass_director`
 2.  Update `.env` file According to the comments in the following example
     
-        
-        # ---------- Database ----------
-        DIRECTOR_DATABASE_URI="mysql+mysqlconnector://user:pass@host:3306/compass_director"
-        DIRECTOR_SAAS_DATABASE_URI="mysql+mysqlconnector://user:pass@host:3306/compass_saas"
-        DIRECTOR_DATABASE_POOL_RECYCLE=600
-        
-        # ---------- Celery ----------
-        DIRECTOR_BROKER_URI="amqp://admin:admin@localhost" # RabbitMQ
-        DIRECTOR_RABBITMQ_URI="amqp://admin:admin@localhost"  # RabbitMQ
-        DIRECTOR_RESULT_BACKEND_URI="redis://:redis_pass@localhost:6379/0" # Redis
-        
-        # ---------- Frontend ----------
-        DIRECTOR_API_URL="http://0.0.0.0:8000/api"
-        DIRECTOR_FLOWER_URL="http://0.0.0.0:5555" # Optional
-        DIRECTOR_ENABLE_HISTORY_MODE=false
-        DIRECTOR_REFRESH_INTERVAL=30000
-        
-        # ---------- API ----------
-        DIRECTOR_WORKFLOWS_PER_PAGE=100
-        DIRECTOR_AUTH_ENABLED = false
-        
-        DIRECTOR_ENABLE_CDN=false
-        DIRECTOR_STATIC_FOLDER=${DIRECTOR_HOME}/static
-        
-        # ---------- Sentry ----------
-        DIRECTOR_SENTRY_DSN=""
-        
-        # ---------- Retention ----------
-        DIRECTOR_DEFAULT_RETENTION_OFFSET=-1
-        
-        # ---------- Custom ----------
-        DIRECTOR_GITEE_API_TOKEN=[gitee_token1, gitee_token2]
-        DIRECTOR_GITHUB_API_TOKEN=[github_token1, github_token2]
-        DIRECTOR_GRIMOIRELAB_CONFIG_FOLDER="/path/to/compass-service-scheduler/analysis_data"
-        DIRECTOR_GRIMOIRELAB_CONFIG_TEMPLATE="/path/to/compass-service-scheduler/setup-template.cfg"
-        
-        DIRECTOR_GITHUB_PROXY=          # Proxy
-        DIRECTOR_ES_URL="http://admin:admin@opensearch:8200"  # OpenSearch
-        DIRECTOR_METRICS_OUT_INDEX="compass_model"            # Index prefix for Compass metrics model
-        DIRECTOR_METRICS_FROM_DATE="2000-01-01"               # Default FROM_DATE
-        DIRECTOR_METRICS_LEVEL="repo"                         # Default level
-        DIRECTOR_HOOK_PASS="Webhook Password the previously created"                 # Webhook Password for callback validation
-        DIRECTOR_IDENTITIES_CONFIG_FILE="/path/to/compass-metrics-model/compass_contributor/conf_utils/identities.yml"
-        DIRECTOR_ORGANIZATIONS_CONFIG_FILE="/path/to/compass-metrics-model/compass_contributor/conf_utils/organizations.json"
-        DIRECTOR_BOTS_CONFIG_FILE="/path/to/compass-metrics-model/compass_contributor/conf_utils/bots.json"
+    ```bash
+    # ---------- Database ----------
+    DIRECTOR_DATABASE_URI="mysql+mysqlconnector://user:pass@host:3306/compass_director"
+    DIRECTOR_SAAS_DATABASE_URI="mysql+mysqlconnector://user:pass@host:3306/compass_saas"
+    DIRECTOR_DATABASE_POOL_RECYCLE=600
+    
+    # ---------- Celery ----------
+    DIRECTOR_BROKER_URI="amqp://admin:admin@localhost" # RabbitMQ
+    DIRECTOR_RABBITMQ_URI="amqp://admin:admin@localhost"  # RabbitMQ
+    DIRECTOR_RESULT_BACKEND_URI="redis://:redis_pass@localhost:6379/0" # Redis
+    
+    # ---------- Frontend ----------
+    DIRECTOR_API_URL="http://0.0.0.0:8000/api"
+    DIRECTOR_FLOWER_URL="http://0.0.0.0:5555" # Optional
+    DIRECTOR_ENABLE_HISTORY_MODE=false
+    DIRECTOR_REFRESH_INTERVAL=30000
+    
+    # ---------- API ----------
+    DIRECTOR_WORKFLOWS_PER_PAGE=100
+    DIRECTOR_AUTH_ENABLED = false
+    
+    DIRECTOR_ENABLE_CDN=false
+    DIRECTOR_STATIC_FOLDER=${DIRECTOR_HOME}/static
+    
+    # ---------- Sentry ----------
+    DIRECTOR_SENTRY_DSN=""
+    
+    # ---------- Retention ----------
+    DIRECTOR_DEFAULT_RETENTION_OFFSET=-1
+    
+    # ---------- Custom ----------
+    DIRECTOR_GITEE_API_TOKEN=[gitee_token1, gitee_token2]
+    DIRECTOR_GITHUB_API_TOKEN=[github_token1, github_token2]
+    DIRECTOR_GRIMOIRELAB_CONFIG_FOLDER="/path/to/compass-service-scheduler/analysis_data"
+    DIRECTOR_GRIMOIRELAB_CONFIG_TEMPLATE="/path/to/compass-service-scheduler/setup-template.cfg"
+    
+    DIRECTOR_GITHUB_PROXY=          # Proxy
+    DIRECTOR_ES_URL="http://admin:admin@opensearch:8200"  # OpenSearch
+    DIRECTOR_METRICS_OUT_INDEX="compass_model"            # Index prefix for Compass metrics model
+    DIRECTOR_METRICS_FROM_DATE="2000-01-01"               # Default FROM_DATE
+    DIRECTOR_METRICS_LEVEL="repo"                         # Default level
+    DIRECTOR_HOOK_PASS="Webhook Password the previously created"                 # Webhook Password for callback validation
+    DIRECTOR_IDENTITIES_CONFIG_FILE="/path/to/compass-metrics-model/compass_contributor/conf_utils/identities.yml"
+    DIRECTOR_ORGANIZATIONS_CONFIG_FILE="/path/to/compass-metrics-model/compass_contributor/conf_utils/organizations.json"
+    DIRECTOR_BOTS_CONFIG_FILE="/path/to/compass-metrics-model/compass_contributor/conf_utils/bots.json"
+    ```
 3.  db migration:
     
-        $ export DIRECTOR_HOME=/path/to/compass-service-scheduler 
-        $ director db upgrade
+    ```bash
+    $ export DIRECTOR_HOME=/path/to/compass-service-scheduler 
+    $ director db upgrade
+    ```
 
 
 <a id="orgb6dc770"></a>
 
 ### Run scheduler
 
-    $ export DIRECTOR_HOME=/path/to/compass-service-scheduler
-    
-    ## Web Service UI
-    
-    $ director webserver
-    
-    ### or listen to 0.0.0.0
-    
-    $ director webserver -b 0.0.0.0:8000
-    
-    ## Celery Worker
-    
-    $ director celery worker --loglevel=info --queues=analyze_queue_v1,analyze_queue_v2,custom_queue_v1 --concurrency 32
+```bash
+$ export DIRECTOR_HOME=/path/to/compass-service-scheduler
+
+## Web Service UI
+
+$ director webserver
+
+### or listen to 0.0.0.0
+
+$ director webserver -b 0.0.0.0:8000
+
+## Celery Worker
+
+$ director celery worker --loglevel=info --queues=analyze_queue_v1,analyze_queue_v2,custom_queue_v1 --concurrency 32
+```
 
 
 <a id="org062c49a"></a>
