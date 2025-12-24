@@ -1,6 +1,8 @@
 ---
+id: people-productivity-overview
 title: People - Productivity
 slug: /dimensions-define/people/productivity
+sidebar_label: Overview
 tags:
   - Metrics Models
   - People

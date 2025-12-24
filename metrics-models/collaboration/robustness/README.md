@@ -1,6 +1,8 @@
 ---
+id: collaboration-robustness-overview
 title: Robustness
 slug: /dimensions-define/collaboration/robustness
+sidebar_label: Overview
 tags:
   - Metrics Models
   - Collaboration

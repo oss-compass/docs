@@ -1,6 +1,8 @@
 ---
+id: collaboration-niche-creation-overview
 title: Collaboration - Niche Creation
 slug: /dimensions-define/collaboration/niche-creation
+sidebar_label: Overview
 tags:
   - Metrics Models
   - Collaboration

@@ -1,6 +1,8 @@
 ---
+id: collaboration-productivity-overview
 title: Collaboration - Productivity
 slug: /dimensions-define/collaboration/productivity
+sidebar_label: Overview
 tags:
   - Metrics Models
   - Collaboration

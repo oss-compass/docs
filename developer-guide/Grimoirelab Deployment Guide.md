@@ -254,8 +254,8 @@ You can refer to or use our docker-compose to deploy or manually go to opensearc
 
 ### Related Repositories
 
-<https://github.com/open-metrics-code>
-<https://github.com/oss-compass/compass-metrics-model>
+- [https://github.com/open-metrics-code](https://github.com/open-metrics-code)
+- [https://github.com/oss-compass/compass-metrics-model](https://github.com/oss-compass/compass-metrics-model)
 
 
 <a id="orgec0a053"></a>

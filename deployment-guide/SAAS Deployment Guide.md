@@ -1,49 +1,50 @@
 
 # Table of Contents
 
-1.  [Compass SAAS Deployment Documentation](#org88f0194)
-    1.  [Introduction](#orgc510719)
-        1.  [Architecture](#org72e6319)
-        2.  [Environment](#orgbaba904)
-    2.  [Pre-Requirements](#org35c9fe2)
-        1.  [Basic Software Installation](#org3ff7119)
-        2.  [Setup Compass Project Information Repository and Webhooks](#orgcdd26c5)
-        3.  [Setup OAuth Apps](#org3f8d84d)
-        4.  [Setup Mail server](#orgb014291)
-        5.  [Setup S3 Storage](#org93494c2)
-    3.  [Basic Components Deployment](#org1a21d6d)
-        1.  [OpenSearch Deployment](#org8da0943)
-        2.  [MariaDB Deployment](#org60a8fd8)
-        3.  [RabbitMQ Deployment](#orgb7707ea)
-        4.  [Redis Deployment](#org972617a)
-    4.  [Compass Metrics Model Component Deployment](#orgcb8f479)
-        1.  [Related Repositories](#orgd6c980a)
-        2.  [Grimoirelab](#orgec0a053)
-        3.  [Compass metrics model](#org9ed58d2)
-    5.  [Compass Scheduler Component Deployment](#org7497042)
-        1.  [Repository](#org51976f6)
-        2.  [Python Requirements](#org56b0653)
-        3.  [Install from source](#orgb440785)
-        4.  [Configure the scheduler](#org1c42624)
-        5.  [Run scheduler](#orgb6dc770)
-    6.  [Compass SVG Render Component Deployment](#org062c49a)
-        1.  [Repository](#org944a728)
-        2.  [Overview](#org304d050)
-        3.  [Build with Docker](#orgf75af06)
-    7.  [Compass Backend Service Deployment](#org19fa82a)
-        1.  [Repository](#org287719a)
-        2.  [Install RVM and Ruby](#org9ac5d4a)
-        3.  [Install dependencies](#org8cba87f)
-        4.  [Configure env file](#orgfce23ae)
-        5.  [Setting up the projects information Submodule](#org39d23a5)
-        6.  [Run Service](#org1402d62)
-    8.  [Compass Frontend Service Deployment](#org83b7463)
-        1.  [Overview](#org7f2e27b)
-        2.  [Build with Docker](#org9969347)
-    9.  [Compass Gateway Service Deployment](#org32f44e3)
-        1.  [Overview](#org486aec7)
-        2.  [Build with Docker](#orgca6e24a)
-    10. [Final](#orgf07ef65)
+- [Table of Contents](#table-of-contents)
+- [Compass SAAS Deployment Documentation](#compass-saas-deployment-documentation)
+  - [Introduction](#introduction)
+    - [Architecture](#architecture)
+    - [Environment](#environment)
+  - [Pre-Requirements](#pre-requirements)
+    - [Basic Software Installation](#basic-software-installation)
+    - [Setup Compass Project Information Repository and Webhooks](#setup-compass-project-information-repository-and-webhooks)
+    - [Setup OAuth Apps](#setup-oauth-apps)
+    - [Setup Mail server](#setup-mail-server)
+    - [Setup S3 Storage](#setup-s3-storage)
+  - [Basic Components Deployment](#basic-components-deployment)
+    - [OpenSearch Deployment](#opensearch-deployment)
+    - [MariaDB Deployment](#mariadb-deployment)
+    - [RabbitMQ Deployment](#rabbitmq-deployment)
+    - [Redis Deployment](#redis-deployment)
+  - [Compass Metrics Model Component Deployment](#compass-metrics-model-component-deployment)
+    - [Related Repositories](#related-repositories)
+    - [Grimoirelab](#grimoirelab)
+    - [Compass metrics model](#compass-metrics-model)
+  - [Compass Scheduler Component Deployment](#compass-scheduler-component-deployment)
+    - [Repository](#repository)
+    - [Python Requirements](#python-requirements)
+    - [Install from source](#install-from-source)
+    - [Configure the scheduler](#configure-the-scheduler)
+    - [Run scheduler](#run-scheduler)
+  - [Compass SVG Render Component Deployment](#compass-svg-render-component-deployment)
+    - [Repository](#repository-1)
+    - [Overview](#overview)
+    - [Build with Docker](#build-with-docker)
+  - [Compass Backend Service Deployment](#compass-backend-service-deployment)
+    - [Repository](#repository-2)
+    - [Install RVM and Ruby, Official website installation link](#install-rvm-and-ruby-official-website-installation-link)
+    - [Install dependencies](#install-dependencies)
+    - [Configure env file](#configure-env-file)
+    - [Setting up the projects information Submodule](#setting-up-the-projects-information-submodule)
+    - [Run Service](#run-service)
+  - [Compass Frontend Service Deployment](#compass-frontend-service-deployment)
+    - [Overview](#overview-1)
+    - [Build with Docker](#build-with-docker-1)
+  - [Compass Gateway Service Deployment](#compass-gateway-service-deployment)
+    - [Overview](#overview-2)
+    - [Build with Docker](#build-with-docker-2)
+  - [Final](#final)
 
 
 <a id="org88f0194"></a>
@@ -131,14 +132,14 @@ This document lists the Compass SAAS component dependencies and basic deployment
 
 1.  Overview
 
-    You need to create a repository like <https://github.com/oss-compass/compass-projects-information>
+    You need to create a repository like [https://github.com/oss-compass/compass-projects-information](https://github.com/oss-compass/compass-projects-information)
     and set up a corresponding webhook to collect Compass SAAS project submitions.
 
 2.  Webhook Settings
 
-    About how to create a webhook you could refer to <https://docs.github.com/en/webhooks/using-webhooks/creating-webhooks>
+    About how to create a webhook you could refer to [https://docs.github.com/en/webhooks/using-webhooks/creating-webhooks](https://docs.github.com/en/webhooks/using-webhooks/creating-webhooks)
     
-    -   Payload URL: <https://>[compass.host]/api/workflow
+    -   Payload URL: https://[compass.host]/api/workflow
     -   Content type: application/json
     -   Secret: xxx
         You can create a random password, but please remember it, this password will be used later in the deployment of the other services.
@@ -149,14 +150,14 @@ This document lists the Compass SAAS component dependencies and basic deployment
 
 ### Setup OAuth Apps
 
-1.  Apply for Github OAuth application: <https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app>
+1.  Apply for Github OAuth application: [https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app)
     -   Homepage URL: https://[compass.host]
     -   Authorization callback URL: https://[compass.host]/users/auth/github/callback
-2.  Apply for Gitee OAuth application: <https://gitee.com/api/v5/oauth_doc#/list-item-3>
+2.  Apply for Gitee OAuth application: [https://gitee.com/api/v5/oauth_doc#/list-item-3](https://gitee.com/api/v5/oauth_doc#/list-item-3)
     -   Homepage URL: https://[compass.host]
     -   Authorization callback URL: https://[compass.host]/users/auth/gitee/callback
-3.  Apply for Wechat OAuth application: <https://developers.weixin.qq.com/doc/oplatform/Website_App/WeChat_Login/Wechat_Login.html>
-4.  Apply for Slack OAuth application: <https://api.slack.com/legacy/oauth>
+3.  Apply for Wechat OAuth application: [https://developers.weixin.qq.com/doc/oplatform/Website_App/WeChat_Login/Wechat_Login.html](https://developers.weixin.qq.com/doc/oplatform/Website_App/WeChat_Login/Wechat_Login.html)
+4.  Apply for Slack OAuth application: [https://api.slack.com/legacy/oauth](https://api.slack.com/legacy/oauth)
 
 
 <a id="orgb014291"></a>
@@ -164,7 +165,7 @@ This document lists the Compass SAAS component dependencies and basic deployment
 ### Setup Mail server
 
 You need to apply for a mail and smtp server in advance to use as a sender for services such as registering users and notifications for OSS Compass.
-For example: <https://support.google.com/a/answer/176600>
+For example: [https://support.google.com/a/answer/176600](https://support.google.com/a/answer/176600)
 
 
 <a id="org93494c2"></a>
@@ -172,14 +173,14 @@ For example: <https://support.google.com/a/answer/176600>
 ### Setup S3 Storage
 
 You need to register an S3 storage service in advance to use as image upload and resource storage for OSS Compass.
-For example: <https://aws.amazon.com/s3/>
+For example: [https://aws.amazon.com/s3/](https://aws.amazon.com/s3/)
 
 
 <a id="org1a21d6d"></a>
 
 ## Basic Components Deployment
 
-Basic components to rely on：
+Basic components to rely on:
 
 -   OpenSearch
     Used for Github/Gitee platform raw data / enrich data, and model report data storage.
@@ -455,8 +456,8 @@ You can refer to or use our docker-compose to deploy or manually go to opensearc
 
 ### Related Repositories
 
-<https://github.com/open-metrics-code>
-<https://github.com/oss-compass/compass-metrics-model>
+- [https://github.com/open-metrics-code](https://github.com/open-metrics-code)
+- [https://github.com/oss-compass/compass-metrics-model](https://github.com/oss-compass/compass-metrics-model)
 
 
 <a id="orgec0a053"></a>
@@ -547,7 +548,7 @@ You could check if compass-metrics-model was intalled seccessfully by pip3 list:
 
 ### Repository
 
-<https://github.com/oss-compass/compass-service-scheduler>
+[https://github.com/oss-compass/compass-service-scheduler](https://github.com/oss-compass/compass-service-scheduler)
 
 
 <a id="org56b0653"></a>
@@ -662,7 +663,7 @@ please use pip install follow packages:
 
 ### Repository
 
-<https://github.com/oss-compass/compass-echarts-server>
+[https://github.com/oss-compass/compass-echarts-server](https://github.com/oss-compass/compass-echarts-server)
 
 
 <a id="org304d050"></a>
@@ -721,7 +722,7 @@ This Component is a echarts server side render by node canvas, using for generat
 
 ### Repository
 
-<https://github.com/oss-compass/compass-web-service>
+[https://github.com/oss-compass/compass-web-service](https://github.com/oss-compass/compass-web-service)
 
 
 <a id="org9ac5d4a"></a>
@@ -931,31 +932,35 @@ This Component is a echarts server side render by node canvas, using for generat
 
 ### Setting up the projects information Submodule
 
-    $ cd compass-web-service
-    $ git submodule init
-    $ git submodule update
-    $ cd compass-projects-information
-    $ git remote set-url origin <your-information-repository-url>
+```bash
+$ cd compass-web-service
+$ git submodule init
+$ git submodule update 
+$ cd compass-projects-information
+$ git remote set-url origin <your-information-repository-url>
+```
 
 
 <a id="org1402d62"></a>
 
 ### Run Service
 
-    # Assets Precompile
-    $ RAILS_ENV=production bundle exec rake assets:precompile
-    
-    # Run Web services
-    $ cd compass-web-service
-    $ bundle exec rails s -e production -b 0.0.0.0
-    
-    # Run Asynchronous Task services
-    $ cd compass-web-service
-    $ bundle exec rake rabbitmq:start
-    
-    # Run Scheduled Task services
-    $ cd compass-web-service
-    $ bundle exec crono -e production
+```bash
+# Assets Precompile
+$ RAILS_ENV=production bundle exec rake assets:precompile
+
+# Run Web services
+$ cd compass-web-service
+$ bundle exec rails s -e production -b 0.0.0.0
+
+# Run Asynchronous Task services
+$ cd compass-web-service
+$ bundle exec rake rabbitmq:start
+
+# Run Scheduled Task services
+$ cd compass-web-service
+$ bundle exec crono -e production
+```
 
 
 <a id="org83b7463"></a>
@@ -968,8 +973,8 @@ This Component is a echarts server side render by node canvas, using for generat
 ### Overview
 
 This is a frontend project for the oss compass, including official website and metric chart pages. Built using the popular front-end framework Next.js, and connected to the backend with graphql for data integration.
-compass-web: <https://github.com/oss-compass/compass-web>
-compass-docs: <https://github.com/oss-compass/document-website>
+compass-web: [https://github.com/oss-compass/compass-web](https://github.com/oss-compass/compass-web)
+compass-docs: [https://github.com/oss-compass/document-website](https://github.com/oss-compass/document-website)
 
 
 <a id="org9969347"></a>
@@ -977,121 +982,130 @@ compass-docs: <https://github.com/oss-compass/document-website>
 ### Build with Docker
 
 1.  docker-compose
-    
-        version: '3'
-        services:
-          docs-server:
-            image: registry.cn-hongkong.aliyuncs.com/oss-compass/compass-docs:nightly
-            ports:
-              - "8081:3000"
-          next-server:
-            image: registry.cn-hongkong.aliyuncs.com/oss-compass/compass-web:nightly
-            env_file: .env
-            volumes:
-              - .env:/app/.env
-            ports:
-              - "8082:3000"
-            extra_hosts:
-              - "host.docker.internal:host-gateway"
+
+    ```yaml
+    version: '3'
+    services:
+      docs-server:
+        image: registry.cn-hongkong.aliyuncs.com/oss-compass/compass-docs:nightly
+        ports:
+          - "8081:3000"
+      next-server:
+        image: registry.cn-hongkong.aliyuncs.com/oss-compass/compass-web:nightly
+        env_file: .env
+        volumes:
+          - .env:/app/.env
+        ports:
+          - "8082:3000"
+        extra_hosts:
+          - "host.docker.internal:host-gateway"
+    ```
 
 2.  Dockerfile for compass-web
+
+    ```dockerfile
+    FROM node:16-alpine AS builder
+    # # If your server node is in a special area, you can replace the apk source to speed up deployment. For example as follow:
+    # RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
+    RUN apk add --no-cache git libc6-compat
     
-        FROM node:16-alpine AS builder
-        # # If your server node is in a special area, you can replace the apk source to speed up deployment. For example as follow:
-        # RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
-        RUN apk add --no-cache git libc6-compat
-        
-        WORKDIR /oss-compass
-        
-        ARG REGISTRY
-        
-        COPY ["package.json", "yarn.lock", "./"]
-        
-        COPY ./apps apps
-        COPY ./packages packages
-        
-        RUN if [[ -z "$REGISTRY" ]] ; then echo not set registry ; else yarn config set registry $REGISTRY && npm config set registry $REGISTRY ; fi
-        RUN yarn config list
-        RUN yarn
-        
-        # Next.js collects completely anonymous telemetry data about general usage.
-        # Learn more here: https://nextjs.org/telemetry
-        # Uncomment the following line in case you want to disable telemetry during the build.
-        ENV NEXT_TELEMETRY_DISABLED 1
-        ENV SENTRY_LOG_ENABLE 1
-        
-        # custom env
-        ARG GIT_COMMIT
-        ARG SENTRY_DSN
-        ARG SENTRY_AUTH_TOKEN
-        
-        ENV NEXT_PUBLIC_GIT_COMMIT=$GIT_COMMIT
-        ENV SENTRY_RELEASE=$GIT_COMMIT
-        
-        ENV SENTRY_DSN=$SENTRY_DSN
-        ENV NEXT_PUBLIC_SENTRY_DSN=$SENTRY_DSN
-        
-        ENV SENTRY_AUTH_TOKEN=$SENTRY_AUTH_TOKEN
-        
-        COPY . .
-        
-        RUN yarn build
-        
-        # If using npm comment out above and use below instead
-        # RUN npm run build
-        
-        # Production image, copy all the files and run next
-        FROM node:16-alpine AS runner
-        WORKDIR /oss-compass
-        
-        ENV NODE_ENV production
-        # Uncomment the following line in case you want to disable telemetry during runtime.
-        ENV NEXT_TELEMETRY_DISABLED 1
-        
-        # custom env
-        ARG GIT_COMMIT
-        ARG SENTRY_DSN
-        
-        ENV NEXT_PUBLIC_GIT_COMMIT=$GIT_COMMIT
-        ENV SENTRY_RELEASE=$GIT_COMMIT
-        
-        ENV SENTRY_DSN=$SENTRY_DSN
-        ENV NEXT_PUBLIC_SENTRY_DSN=$SENTRY_DSN
-        
-        RUN addgroup --system --gid 1001 nodejs
-        RUN adduser --system --uid 1001 nextjs
-        
-        COPY --from=builder /oss-compass/apps/web/next.config.js .
-        COPY --from=builder /oss-compass/apps/web/package.json .
-        
-        # Automatically leverage output traces to reduce image size
-        # https://nextjs.org/docs/advanced-features/output-file-tracing
-        COPY --from=builder --chown=nextjs:nodejs /oss-compass/apps/web/.next/standalone ./
-        COPY --from=builder --chown=nextjs:nodejs /oss-compass/apps/web/.next/static ./apps/web/.next/static
-        COPY --from=builder --chown=nextjs:nodejs /oss-compass/apps/web/public ./apps/web/public
-        
-        USER nextjs
-        
-        EXPOSE 3000
-        
-        ENV PORT 3000
-        
-        CMD ["node", "apps/web/server.js"]
+    WORKDIR /oss-compass
+    
+    ARG REGISTRY
+    
+    COPY ["package.json", "yarn.lock", "./"]
+    
+    COPY ./apps apps
+    COPY ./packages packages
+    
+    RUN if [[ -z "$REGISTRY" ]] ; then echo not set registry ; else yarn config set registry $REGISTRY && npm config set registry $REGISTRY ; fi
+    RUN yarn config list
+    RUN yarn
+    
+    # Next.js collects completely anonymous telemetry data about general usage.
+    # Learn more here: https://nextjs.org/telemetry
+    # Uncomment the following line in case you want to disable telemetry during the build.
+    ENV NEXT_TELEMETRY_DISABLED 1
+    ENV SENTRY_LOG_ENABLE 1
+    
+    # custom env
+    ARG GIT_COMMIT
+    ARG SENTRY_DSN
+    ARG SENTRY_AUTH_TOKEN
+    
+    ENV NEXT_PUBLIC_GIT_COMMIT=$GIT_COMMIT
+    ENV SENTRY_RELEASE=$GIT_COMMIT
+    
+    ENV SENTRY_DSN=$SENTRY_DSN
+    ENV NEXT_PUBLIC_SENTRY_DSN=$SENTRY_DSN
+    
+    ENV SENTRY_AUTH_TOKEN=$SENTRY_AUTH_TOKEN
+    
+    COPY . .
+    
+    RUN yarn build
+    
+    # If using npm comment out above and use below instead
+    # RUN npm run build
+    
+    # Production image, copy all the files and run next
+    FROM node:16-alpine AS runner
+    WORKDIR /oss-compass
+    
+    ENV NODE_ENV production
+    # Uncomment the following line in case you want to disable telemetry during runtime.
+    ENV NEXT_TELEMETRY_DISABLED 1
+    
+    # custom env
+    ARG GIT_COMMIT
+    ARG SENTRY_DSN
+    
+    ENV NEXT_PUBLIC_GIT_COMMIT=$GIT_COMMIT
+    ENV SENTRY_RELEASE=$GIT_COMMIT
+    
+    ENV SENTRY_DSN=$SENTRY_DSN
+    ENV NEXT_PUBLIC_SENTRY_DSN=$SENTRY_DSN
+    
+    RUN addgroup --system --gid 1001 nodejs
+    RUN adduser --system --uid 1001 nextjs
+    
+    COPY --from=builder /oss-compass/apps/web/next.config.js .
+    COPY --from=builder /oss-compass/apps/web/package.json .
+    
+    # Automatically leverage output traces to reduce image size
+    # https://nextjs.org/docs/advanced-features/output-file-tracing
+    COPY --from=builder --chown=nextjs:nodejs /oss-compass/apps/web/.next/standalone ./
+    COPY --from=builder --chown=nextjs:nodejs /oss-compass/apps/web/.next/static ./apps/web/.next/static
+    COPY --from=builder --chown=nextjs:nodejs /oss-compass/apps/web/public ./apps/web/public
+    
+    USER nextjs
+    
+    EXPOSE 3000
+    
+    ENV PORT 3000
+    
+    CMD ["node", "apps/web/server.js"]
+    ```
+
 3.  Dockerfile for compass-doc
+
+    ```dockerfile
+    FROM nginx:1.23.2-alpine
     
-        FROM nginx:1.23.2-alpine
-        
-        COPY build /usr/share/nginx/html/build
-        COPY nginx.conf /etc/nginx/conf.d/default.conf
-        EXPOSE 3000
-        
-        ENTRYPOINT ["nginx", "-g", "daemon off;"]
+    COPY build /usr/share/nginx/html/build
+    COPY nginx.conf /etc/nginx/conf.d/default.conf
+    EXPOSE 3000
     
+    ENTRYPOINT ["nginx", "-g", "daemon off;"]
+    ```
+
 4.  Create docker-compose-compassweb.yml file, and run it
 
-        cd compass-web-service
-        vi docker-compose-compassweb.yml  # copy docker-compose contents
-        docker-compose -f docker-compose-compassweb.yml up -d
+    ```bash
+    cd compass-web-service
+    vi docker-compose-compassweb.yml  # copy docker-compose contents
+    docker-compose -f docker-compose-compassweb.yml up -d
+    ```
 
 
 <a id="org32f44e3"></a>
@@ -1111,164 +1125,174 @@ Compass uses nginx as the gateway entry point for the entire service, which is d
 ### Build with Docker
 
 1.  docker-compose
-    
-        version: '3'
-        services:
-          nginx:
-            image: nginx:1.23.3
-            restart: always
-            ports:
-              - "80:80"
-            volumes:
-              - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-              - ./nginx/server.conf:/etc/nginx/conf.d/default.conf
-            extra_hosts:
-              - "host.docker.internal:host-gateway"
+
+    ```yaml
+    version: '3'
+    services:
+      nginx:
+        image: nginx:1.23.3
+        restart: always
+        ports:
+          - "80:80"
+        volumes:
+          - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+          - ./nginx/server.conf:/etc/nginx/conf.d/default.conf
+        extra_hosts:
+          - "host.docker.internal:host-gateway"
+    ```
+
 2.  nginx.conf
+
+    ```nginx
+    user  nginx;
+    worker_processes  auto;
     
-        user  nginx;
-        worker_processes  auto;
-        
-        error_log  /var/log/nginx/error.log notice;
-        pid        /var/run/nginx.pid;
-        
-        
-        events {
-            worker_connections  1024;
-        }
-        
-        
-        http {
-            include       /etc/nginx/mime.types;
-            default_type  application/octet-stream;
-        
-            log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
-                              '$status $body_bytes_sent "$http_referer" '
-                              '"$http_user_agent" "$http_x_forwarded_for"';
-        
-            access_log  /var/log/nginx/access.log  main;
-        
-            #limit_req_zone $binary_remote_addr zone=compassperipreq:100m rate=1000r/s;
-            #limit_req_status 429;
-            #limit_req zone=compassperipreq burst=5;
-        
-            sendfile        on;
-            #tcp_nopush     on;
-        
-            keepalive_timeout  65;
-        
-            #gzip  on;
-        
-            include /etc/nginx/conf.d/*.conf;
-        }
+    error_log  /var/log/nginx/error.log notice;
+    pid        /var/run/nginx.pid;
+    
+    
+    events {
+        worker_connections  1024;
+    }
+    
+    
+    http {
+        include       /etc/nginx/mime.types;
+        default_type  application/octet-stream;
+    
+        log_format  main  '\$remote_addr - \$remote_user [\$time_local] "\$request" '
+                          '\$status \$body_bytes_sent "\$http_referer" '
+                          '"\$http_user_agent" "\$http_x_forwarded_for"';
+    
+        access_log  /var/log/nginx/access.log  main;
+    
+        #limit_req_zone \$binary_remote_addr zone=compassperipreq:100m rate=1000r/s;
+        #limit_req_status 429;
+        #limit_req zone=compassperipreq burst=5;
+    
+        sendfile        on;
+        #tcp_nopush     on;
+    
+        keepalive_timeout  65;
+    
+        #gzip  on;
+    
+        include /etc/nginx/conf.d/*.conf;
+    }
+    ```
+
 3.  server.conf
+
+    ```nginx
+    server {
+             listen 80;
+             server_name _;
+             client_max_body_size 100M;
+             client_body_buffer_size     32k;
+             client_header_buffer_size   16k;
+             large_client_header_buffers 8 64k;
     
-        server {
-                 listen 80;
-                 server_name _;
-                 client_max_body_size 100M;
-                 client_body_buffer_size     32k;
-                 client_header_buffer_size   16k;
-                 large_client_header_buffers 8 64k;
-        
-                 location /zh/ {
-                     proxy_set_header Host $host;
-                     proxy_set_header X-Real-IP $remote_addr;
-                     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                     proxy_pass http://host.docker.internal:8081/zh/;
-                 }
-        
-                 location /docs/ {
-                     proxy_set_header Host $host;
-                     proxy_set_header X-Real-IP $remote_addr;
-                     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                     proxy_pass http://host.docker.internal:8081/docs/;
-                 }
-                 location /blog/ {
-                     proxy_set_header Host $host;
-                     proxy_set_header X-Real-IP $remote_addr;
-                     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                     proxy_pass http://host.docker.internal:8081/blog/;
-                 }
-                 location /assets/ {
-                     proxy_set_header Host $host;
-                     proxy_set_header X-Real-IP $remote_addr;
-                     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                     proxy_pass http://host.docker.internal:8081/assets/;
-                 }
-                 location /img/ {
-                     proxy_set_header Host $host;
-                     proxy_set_header X-Real-IP $remote_addr;
-                     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                     proxy_pass http://host.docker.internal:8081/img/;
-                 }
-                 location /404 {
-                     proxy_set_header Host $host;
-                     proxy_set_header X-Real-IP $remote_addr;
-                     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                     proxy_pass http://host.docker.internal:8081/404;
-                 }
-        
-                 location /api/hook {
-                     proxy_set_header Host $host;
-                     proxy_set_header X-Real-IP $remote_addr;
-                     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                     proxy_pass http://host.docker.internal:3000/api/hook;
-                 }
-                 location /api/graphql {
-                     proxy_set_header Host $host;
-                     proxy_set_header X-Real-IP $remote_addr;
-                     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                     proxy_pass http://host.docker.internal:3000/api/graphql;
-                 }
-                 location /api/workflow {
-                     proxy_set_header Host $host;
-                     proxy_set_header X-Real-IP $remote_addr;
-                     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                     proxy_pass http://host.docker.internal:3000/api/worflow;
-                 }
-                 location /users {
-                     proxy_set_header Host $host;
-                     proxy_set_header X-Real-IP $remote_addr;
-                     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                     proxy_pass http://host.docker.internal:3000/users;
-                 }
-                 location /badge {
-                     proxy_set_header Host $host;
-                     proxy_set_header X-Real-IP $remote_addr;
-                     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                     proxy_pass http://host.docker.internal:3000/badge;
-                 }
-                 location /chart {
-                     proxy_set_header Host $host;
-                     proxy_set_header X-Real-IP $remote_addr;
-                     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                     proxy_pass http://host.docker.internal:3000/chart;
-        
-                 }
-                 location /files {
-                     proxy_set_header Host $host;
-                     proxy_set_header X-Real-IP $remote_addr;
-                     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                     proxy_pass http://host.docker.internal:3000/files;
-                 }
-                 location / {
-                     proxy_set_header Host $host;
-                     proxy_set_header X-Real-IP $remote_addr;
-                     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                     proxy_pass http://host.docker.internal:8082/;
-                 }
+             location /zh/ {
+                 proxy_set_header Host \$host;
+                 proxy_set_header X-Real-IP \$remote_addr;
+                 proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                 proxy_pass http://host.docker.internal:8081/zh/;
              }
+    
+             location /docs/ {
+                 proxy_set_header Host \$host;
+                 proxy_set_header X-Real-IP \$remote_addr;
+                 proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                 proxy_pass http://host.docker.internal:8081/docs/;
+             }
+             location /blog/ {
+                 proxy_set_header Host \$host;
+                 proxy_set_header X-Real-IP \$remote_addr;
+                 proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                 proxy_pass http://host.docker.internal:8081/blog/;
+             }
+             location /assets/ {
+                 proxy_set_header Host \$host;
+                 proxy_set_header X-Real-IP \$remote_addr;
+                 proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                 proxy_pass http://host.docker.internal:8081/assets/;
+             }
+             location /img/ {
+                 proxy_set_header Host \$host;
+                 proxy_set_header X-Real-IP \$remote_addr;
+                 proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                 proxy_pass http://host.docker.internal:8081/img/;
+             }
+             location /404 {
+                 proxy_set_header Host \$host;
+                 proxy_set_header X-Real-IP \$remote_addr;
+                 proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                 proxy_pass http://host.docker.internal:8081/404;
+             }
+    
+             location /api/hook {
+                 proxy_set_header Host \$host;
+                 proxy_set_header X-Real-IP \$remote_addr;
+                 proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                 proxy_pass http://host.docker.internal:3000/api/hook;
+             }
+             location /api/graphql {
+                 proxy_set_header Host \$host;
+                 proxy_set_header X-Real-IP \$remote_addr;
+                 proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                 proxy_pass http://host.docker.internal:3000/api/graphql;
+             }
+             location /api/workflow {
+                 proxy_set_header Host \$host;
+                 proxy_set_header X-Real-IP \$remote_addr;
+                 proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                 proxy_pass http://host.docker.internal:3000/api/worflow;
+             }
+             location /users {
+                 proxy_set_header Host \$host;
+                 proxy_set_header X-Real-IP \$remote_addr;
+                 proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                 proxy_pass http://host.docker.internal:3000/users;
+             }
+             location /badge {
+                 proxy_set_header Host \$host;
+                 proxy_set_header X-Real-IP \$remote_addr;
+                 proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                 proxy_pass http://host.docker.internal:3000/badge;
+             }
+             location /chart {
+                 proxy_set_header Host \$host;
+                 proxy_set_header X-Real-IP \$remote_addr;
+                 proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                 proxy_pass http://host.docker.internal:3000/chart;
+    
+             }
+             location /files {
+                 proxy_set_header Host \$host;
+                 proxy_set_header X-Real-IP \$remote_addr;
+                 proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                 proxy_pass http://host.docker.internal:3000/files;
+             }
+             location / {
+                 proxy_set_header Host \$host;
+                 proxy_set_header X-Real-IP \$remote_addr;
+                 proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                 proxy_pass http://host.docker.internal:8082/;
+             }
+         }
+    ```
 
 4.  Create docker-compose-nginx.yml file, and run it
 
-        mkdir nginx
-        cd nginx 
-        vi nginx.conf   # copy nginx conf contents
-        vi server.conf   # copy server conf contents
-        cd ../
-        vi docker-compose-nginx.yml  # copy docker-compose contents
-        docker-compose -f docker-compose-nginx.yml up -d
+    ```bash
+    mkdir nginx
+    cd nginx 
+    vi nginx.conf   # copy nginx conf contents
+    vi server.conf   # copy server conf contents
+    cd ../
+    vi docker-compose-nginx.yml  # copy docker-compose contents
+    docker-compose -f docker-compose-nginx.yml up -d
+    ```
 
 <a id="orgf07ef65"></a>
 
