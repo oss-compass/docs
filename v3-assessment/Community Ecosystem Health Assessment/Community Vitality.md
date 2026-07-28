@@ -23,11 +23,12 @@ Definition: Evaluating the community's activity level and attractiveness, reflec
 
 **Developer Base**
 
-| Metric                      | URL                                                                                                                                   | Threshold | Weight |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------ |
+| Metric                     | URL                                                                                                                                   | Threshold | Weight |
+| -------------------------- |---------------------------------------------------------------------------------------------------------------------------------------|-----------|--------|
 | Community Contributor Count | [/api/v3/developer_base/contributor_count](https://oss-compass.org/dataHub#api_v3_developer_base_contributor_count)                   | 2000      | 0.33   |
-| Code Contributor Count      | [/api/v3/developer_base/code_contributor_count](https://oss-compass.org/dataHub#api_v3_developer_base_code_contributor_count)         | 1000      | 0.33   |
-| Non-Code Contributor Count  | [/api/v3/developer_base/non_code_contributor_count](https://oss-compass.org/dataHub#api_v3_developer_base_non_code_contributor_count) | 1000      | 0.34   |
+| Code Contributor Count     | [/api/v3/developer_base/code_contributor_count](https://oss-compass.org/dataHub#api_v3_developer_base_code_contributor_count)         | 1000      | 0.33   |
+| Non-Code Contributor Count | [/api/v3/developer_base/non_code_contributor_count](https://oss-compass.org/dataHub#api_v3_developer_base_non_code_contributor_count) | 500       | 0.17   |
+| Community Follower Count  | [/api/v3/developer_base/follower_count](https://oss-compass.org/dataHub#api_v3_developer_base_follower_count)                         | 1000      | 0.17   |
 
 # Metrics in Assessment Model
 
@@ -118,10 +119,31 @@ Code contributor count reflects the community's technical contribution capabilit
 ### Non-Code Contributor Count
 
 - Definition: The number of users who have made any contributions in the community during the statistical period, including but not limited to creating or commenting on issues, participating in project discussions, etc., but have not engaged in any code-related behaviors.
-- Weight: 34%
+- Weight: 17%
 - Threshold: 1000
 
-The number of non-code contributors reflects the degree of diverse participation in the community. This metric excludes all contributors directly involved in code production, thereby quantifying the diverse contributor groups purely composed of Issue interactions, project management, project discussions, and lightweight community participation. This indicator can reflect the inclusiveness and participation threshold of the community.
+The number of non-code contributors reflects the diversity of community participation. This metric counts contributors in the community who do not participate in direct code production activities—such as code commits and merges—but who contribute to the project’s development through project maintenance, issue management, and community interaction. Based on the type of contribution, these contributors can be categorized into the following roles:
+
+- Documentation Maintainers: Responsible for maintaining project-related textual information, including refining the descriptions of issues and pull requests and modifying title information.
+
+- Issue Managers: Responsible for managing the lifecycle of issues, including creating issues, applying tags, tracking statuses, closing issues, and linking them to pull requests.
+
+- Pull Request Collaboration Managers: Responsible for managing the pull request collaboration process, including task assignment, status maintenance, and tag management.
+
+- Community Engagement Participants: Contribute to the project through lightweight community activities such as commenting on issues and participating in project discussions.
+
+A large number of non-code contributors typically indicates a lower barrier to community participation, more diverse forms of contribution, and a more open and inclusive ecosystem.
+
+
+### Community Followers Count
+
+- Definition: The number of users who have starred or forked the project within the community during the statistical period.
+- Weight: 17%
+- Threshold: 1000
+
+The number of community followers is a metric for measuring a project’s community influence and external recognition. The number of users in the community who follow and share the project solely through stars or forks but do not participate in code commits, pull requests, issues, comments, or other forms of project collaboration reflects the community’s reach and the potential scale of participation.
+
+
 
 # Assessment Model Algorithm
 
