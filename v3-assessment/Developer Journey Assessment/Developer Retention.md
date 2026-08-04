@@ -39,35 +39,35 @@ The core developer retention model focuses on the continued participation of cor
 
 ### Organizational Code Core Developer (including managers) Retention Rate
 
-- Definition: The retention rate of organizational code core contributors (including managers) during the statistical period.
+- Definition: The rate at which organizational code core contributors (including managers) maintain their core status during the statistical period.
 - Weight: 25%
 - Threshold: 1 (100%)
 
-The organizational code core developer retention rate reflects the organization's ability to retain core developers. A high retention rate means that the organization can continuously invest resources to support developers' participation in the project, maintaining the project's technical continuity and stability.
+The organizational code core developer retention rate reflects the organization's ability to retain core developers. This metric counts the proportion of organizational code contributors who were core in the previous period and remain core in the current period out of the total number of core contributors in the previous period. A high retention rate means that the organization can continuously invest resources to support developers' participation in the project, maintaining the project's technical continuity and stability.
 
 ### Organizational Issue Core Developer (including managers) Retention Rate
 
-- Definition: The retention rate of organizational Issue core contributors (including managers) during the statistical period.
+- Definition: The rate at which organizational Issue core contributors (including managers) maintain their core status during the statistical period.
 - Weight: 25%
 - Threshold: 1 (100%)
 
-The organizational Issue core developer retention rate reflects the organization's continued investment in community management and communication. The retention of these developers ensures continuous tracking and effective resolution of community issues.
+The organizational Issue core developer retention rate reflects the organization's continued investment in community management and communication. This metric counts the proportion of organizational Issue contributors who were core in the previous period and remain core in the current period out of the total number of core contributors in the previous period. The retention of these developers ensures continuous tracking and effective resolution of community issues.
 
 ### Individual Code Core Developer (including managers) Retention Rate
 
-- Definition: The retention rate of individual code core contributors (including managers) during the statistical period.
+- Definition: The rate at which individual code core contributors (including managers) maintain their core status during the statistical period.
 - Weight: 25%
 - Threshold: 1 (100%)
 
-The individual code core developer retention rate reflects the community's attractiveness and ability to retain individual contributors. A high retention rate means that the community can provide a good contribution environment and growth opportunities for individual developers.
+The individual code core developer retention rate reflects the community's attractiveness and ability to retain individual contributors. This metric counts the proportion of individual code contributors who were core in the previous period and remain core in the current period out of the total number of core contributors in the previous period. A high retention rate means that the community can provide a good contribution environment and growth opportunities for individual developers.
 
 ### Individual Issue Core Developer (including managers) Retention Rate
 
-- Definition: The retention rate of individual Issue core contributors (including managers) during the statistical period.
+- Definition: The rate at which individual Issue core contributors (including managers) maintain their core status during the statistical period.
 - Weight: 25%
 - Threshold: 1 (100%)
 
-The individual Issue core developer retention rate reflects the community's continued attractiveness in community management and communication. The retention of these developers ensures the continuity of community communication and the effectiveness of problem handling.
+The individual Issue core developer retention rate reflects the community's continued attractiveness in community management and communication. This metric counts the proportion of individual Issue contributors who were core in the previous period and remain core in the current period out of the total number of core contributors in the previous period. The retention of these developers ensures the continuity of community communication and the effectiveness of problem handling.
 
 ## Core Developer Churn
 
@@ -75,35 +75,35 @@ The core developer churn model focuses on the situation where core developers ar
 
 ### Organizational Code Core Developer (including managers) Churn Rate
 
-- Definition: The churn rate of organizational code core contributors (including managers) from the core level during the statistical period.
+- Definition: The rate at which organizational code core contributors (including managers) are downgraded from the core level to regular or visitor level during the statistical period.
 - Weight: 25%
 - Threshold: 1 (100%)
 
-The organizational code core developer churn rate reflects the organization's challenges in talent echelon construction. A moderate churn rate is normal talent flow, but an excessively high churn rate may indicate insufficient organizational support or declining project attractiveness.
+The organizational code core developer churn rate reflects the organization's challenges in talent echelon construction. This metric counts the proportion of organizational code contributors who were core in the previous period but downgraded to regular or visitor in the current period out of the total number of core contributors in the previous period. A moderate churn rate is normal talent flow, but an excessively high churn rate may indicate insufficient organizational support or declining project attractiveness.
 
 ### Organizational Issue Core Developer (including managers) Churn Rate
 
-- Definition: The churn rate of organizational Issue core contributors (including managers) from the core level during the statistical period.
+- Definition: The rate at which organizational Issue core contributors (including managers) are downgraded from the core level to regular or visitor level during the statistical period.
 - Weight: 25%
 - Threshold: 1 (100%)
 
-The organizational Issue core developer churn rate reflects the flow of organizational community management talent. Churn may be due to project phase changes, organizational strategic adjustments, or personal development needs.
+The organizational Issue core developer churn rate reflects the flow of organizational community management talent. This metric counts the proportion of organizational Issue contributors who were core in the previous period but downgraded to regular or visitor in the current period out of the total number of core contributors in the previous period. Churn may be due to project phase changes, organizational strategic adjustments, or personal development needs.
 
 ### Individual Code Core Developer (including managers) Churn Rate
 
-- Definition: The churn rate of individual code core contributors (including managers) from the core level during the statistical period.
+- Definition: The rate at which individual code core contributors (including managers) are downgraded from the core level to regular or visitor level during the statistical period.
 - Weight: 25%
 - Threshold: 1 (100%)
 
-The individual code core developer churn rate reflects the community's challenges in retaining individual contributors. Churn may be due to personal time and energy constraints, shifting interests, or changes in the community environment.
+The individual code core developer churn rate reflects the community's challenges in retaining individual contributors. This metric counts the proportion of individual code contributors who were core in the previous period but downgraded to regular or visitor in the current period out of the total number of core contributors in the previous period. Churn may be due to personal time and energy constraints, shifting interests, or changes in the community environment.
 
 ### Individual Issue Core Developer (including managers) Churn Rate
 
-- Definition: The churn rate of individual Issue core contributors (including managers) from the core level during the statistical period.
+- Definition: The rate at which individual Issue core contributors (including managers) are downgraded from the core level to regular or visitor level during the statistical period.
 - Weight: 25%
 - Threshold: 1 (100%)
 
-The individual Issue core developer churn rate reflects the community's challenges in retaining community management talent.
+The individual Issue core developer churn rate reflects the community's challenges in retaining community management talent. This metric counts the proportion of individual Issue contributors who were core in the previous period but downgraded to regular or visitor in the current period out of the total number of core contributors in the previous period.
 
 ## Core Developer Loss
 
@@ -111,35 +111,35 @@ The core developer loss model focuses on the situation where core developers com
 
 ### Organizational Code Core Developer (including managers) Loss Rate
 
-- Definition: The loss rate of organizational code core contributors (including managers) completely leaving the community during the statistical period.
+- Definition: The rate at which organizational code core contributors (including managers) completely leave the community during the statistical period.
 - Weight: 25%
 - Threshold: 1 (100%)
 
-The organizational code core developer loss rate reflects the organization's severe challenges in talent retention. Loss may be due to organizational strategic adjustments, project direction changes, or competitor poaching. A high loss rate will seriously affect the project's technical continuity.
+The organizational code core developer loss rate reflects the organization's severe challenges in talent retention. This metric counts the proportion of organizational code contributors who were core in the previous period but have no contribution records in the current period out of the total number of core contributors in the previous period. Loss may be due to organizational strategic adjustments, project direction changes, or competitor poaching. A high loss rate will seriously affect the project's technical continuity.
 
 ### Organizational Issue Core Developer (including managers) Loss Rate
 
-- Definition: The loss rate of organizational Issue core contributors (including managers) completely leaving the community during the statistical period.
+- Definition: The rate at which organizational Issue core contributors (including managers) completely leave the community during the statistical period.
 - Weight: 25%
 - Threshold: 1 (100%)
 
-The organizational Issue core developer loss rate reflects the organization's challenges in retaining community management talent. Loss will lead to the loss of community management experience and affect the continuity of community governance.
+The organizational Issue core developer loss rate reflects the organization's challenges in retaining community management talent. This metric counts the proportion of organizational Issue contributors who were core in the previous period but have no contribution records in the current period out of the total number of core contributors in the previous period. Loss will lead to the loss of community management experience and affect the continuity of community governance.
 
 ### Individual Code Core Developer (including managers) Loss Rate
 
-- Definition: The loss rate of individual code core contributors (including managers) completely leaving the community during the statistical period.
+- Definition: The rate at which individual code core contributors (including managers) completely leave the community during the statistical period.
 - Weight: 25%
 - Threshold: 1 (100%)
 
-The individual code core developer loss rate reflects the community's serious problems in retaining individual contributors. Loss may be due to poor community environment, lack of recognition, or personal development needs. A high loss rate will seriously affect the project's technical capability and community vitality.
+The individual code core developer loss rate reflects the community's serious problems in retaining individual contributors. This metric counts the proportion of individual code contributors who were core in the previous period but have no contribution records in the current period out of the total number of core contributors in the previous period. Loss may be due to poor community environment, lack of recognition, or personal development needs. A high loss rate will seriously affect the project's technical capability and community vitality.
 
 ### Individual Issue Core Developer (including managers) Loss Rate
 
-- Definition: The loss rate of individual Issue core contributors (including managers) completely leaving the community during the statistical period.
+- Definition: The rate at which individual Issue core contributors (including managers) completely leave the community during the statistical period.
 - Weight: 25%
 - Threshold: 1 (100%)
 
-The individual Issue core developer loss rate reflects the community's challenges in retaining community management talent. Loss will lead to the loss of community management experience and affect the effectiveness of community communication and problem handling.
+The individual Issue core developer loss rate reflects the community's challenges in retaining community management talent. This metric counts the proportion of individual Issue contributors who were core in the previous period but have no contribution records in the current period out of the total number of core contributors in the previous period. Loss will lead to the loss of community management experience and affect the effectiveness of community communication and problem handling.
 
 # Assessment Model Algorithm
 
