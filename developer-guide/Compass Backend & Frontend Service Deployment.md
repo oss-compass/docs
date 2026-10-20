@@ -1000,7 +1000,7 @@ bundle install
 4.  initializate secret
 
     ```bash
-    $ RAILS_ENV=prodcution bundle exec rake secret
+    $ RAILS_ENV=production bundle exec rake secret
     # => xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (copy the secert)
     $ bin/rails credentials:edit
     # => Fill in the secret copied above and save & exit edit

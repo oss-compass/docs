@@ -637,7 +637,7 @@ CMD ["pm2-docker", "start", "server.js"]
       #+END_SRC
    4. initializate secret
             #+BEGIN_SRC shell
-        $ RAILS_ENV=prodcution bundle exec rake secret
+        $ RAILS_ENV=production bundle exec rake secret
         # => xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (copy the secert)
         $ bin/rails credentials:edit
         # => Fill in the secret copied above and save & exit edit
